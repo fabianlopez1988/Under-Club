@@ -20,8 +20,8 @@ import {
 } from '@nestjs/swagger';
 import { User } from '../entities/user.entity';
 
-@ApiTags('users')
-@Controller('users')
+@ApiTags('admin')
+@Controller('admin')
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
@@ -32,21 +32,10 @@ export class UsersController {
     description: 'El usuario ha sido creado correctamente',
   })
   @ApiResponse({ status: 400, description: 'Petición inválida' })
-  @Post('signup')
+  @Post()
   async createUser(@Body() createUserDto: CreateUserDto) {
     const createdUser = await this.usersService.createUser(createUserDto);
     return createdUser;
-  }
-
-  @ApiOperation({ summary: 'Devolver todos los users delivery-man' })
-  @ApiResponse({
-    status: 201,
-    description: 'Muestra todos los deliveryMan correctamente',
-  })
-  @ApiResponse({ status: 400, description: 'Petición inválida' })
-  @Get('alldeliveryman')
-  async getAllNonAdminUsers(): Promise<CreateUserDto[]> {
-    return await this.usersService.getAllNonAdminUsers();
   }
 
   @ApiOperation({ summary: 'Devolver un user por ID' })
@@ -98,21 +87,5 @@ export class UsersController {
       throw new NotFoundException(`user con ID ${id} no encontrado.`);
     }
     return 'Usuario eliminado';
-  }
-
-  @ApiOperation({ summary: 'Asignar paquetes a un usuario' })
-  @ApiResponse({
-    status: 201,
-    description: 'Los paquetes han sido asignados correctamente',
-  })
-  @ApiResponse({ status: 404, description: 'Usuario no encontrado' })
-  @ApiParam({ name: 'userId', type: 'string' })
-  @ApiBody({ type: [String] })
-  @Post(':userId/assign')
-  async assignPackageToUser(
-    @Param('userId') userId: string,
-    @Body('packs') packs: string[],
-  ) {
-    return this.usersService.assignPackageToUser(userId, packs);
   }
 }
