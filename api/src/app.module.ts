@@ -7,7 +7,9 @@ import { AuthModule } from './auth/auth.module';
 import { PackagesModule } from './packages/packages.module';
 import { FormSwornModule } from './forms-sworn/form-sworn.module';
 import { EventsModule } from './events/events.module';
+import { EpisodesModule } from './episodes/episodes.module';
 import { json } from 'express';
+import { NewsModule } from './news/news.module';
 
 @Module({
   imports: [
@@ -19,6 +21,8 @@ import { json } from 'express';
     PackagesModule,
     FormSwornModule,
     EventsModule,
+    EpisodesModule,
+    NewsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
