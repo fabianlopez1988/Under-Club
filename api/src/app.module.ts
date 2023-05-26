@@ -6,6 +6,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AuthModule } from './auth/auth.module';
 import { PackagesModule } from './packages/packages.module';
 import { FormSwornModule } from './forms-sworn/form-sworn.module';
+import { EventsModule } from './events/events.module';
 import { json } from 'express';
 
 @Module({
@@ -17,6 +18,7 @@ import { json } from 'express';
     AuthModule,
     PackagesModule,
     FormSwornModule,
+    EventsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
