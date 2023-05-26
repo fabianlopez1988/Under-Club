@@ -6,17 +6,21 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AuthModule } from './auth/auth.module';
 import { PackagesModule } from './packages/packages.module';
 import { FormSwornModule } from './forms-sworn/form-sworn.module';
+import { AgencyModule } from './agency/agency.module';
+import { ResidentModule } from './residents/residents.module';
 import { json } from 'express';
 
 @Module({
   imports: [
     MongooseModule.forRoot(
-      'mongodb+srv://edgar_lagos:hcB1I3QbOiiYdeA6@cluster0.nuwmk5t.mongodb.net/?retryWrites=true&w=majority',
+      'mongodb+srv://underclubdb:YeP5ohRSZuIBQRff@ucweb.mj8mbcr.mongodb.net/?retryWrites=true&w=majority',
     ),
     UserModule,
     AuthModule,
     PackagesModule,
     FormSwornModule,
+    AgencyModule,
+    ResidentModule,
   ],
   controllers: [AppController],
   providers: [AppService],
