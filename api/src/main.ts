@@ -17,13 +17,19 @@ async function bootstrap() {
   );
 
   const config = new DocumentBuilder()
-    .setTitle('Fast Delivery')
-    .setDescription('Delivery App')
+    .setTitle('Under Club')
+    .setDescription('Web Under Club')
     .setVersion('1.0')
     .addTag('users')
     .addTag('auth')
     .addTag('packages')
     .addTag('form-sworn')
+    .addTag('agency')
+    .addTag('residents')
+    .addTag('episode')
+    .addTag('event')
+    .addTag('new')
+    .addTag('podcast')
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
