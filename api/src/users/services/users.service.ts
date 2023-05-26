@@ -41,10 +41,6 @@ export class UsersService {
     return this.userModel.findOne(query);
   }
 
-  async getAllNonAdminUsers(): Promise<CreateUserDto[]> {
-    return this.userModel.find({ admin: false });
-  }
-
   async getUserById(id: string): Promise<CreateUserDto> {
     const user: CreateUserDto = await this.userModel.findById(id);
     return user;
@@ -71,59 +67,5 @@ export class UsersService {
 
   async deleteUser(id: string) {
     return this.userModel.findByIdAndDelete(id);
-  }
-
-  async assignPackageToUser(
-    userId: string,
-    packs: string[],
-  ): Promise<UpdateUserDto> {
-    const user = await this.userModel.findById(userId);
-
-    if (!user) {
-      throw new Error('User not found');
-    }
-    if (!packs) {
-      throw new Error('Packs is undefined');
-    }
-
-    const existingPackageIds = user.packages.map((p) => p.toString());
-    const newPackageIds = packs.filter(
-      (id) => !existingPackageIds.includes(id),
-    );
-    if (newPackageIds.length !== packs.length) {
-      const duplicatePackageIds = packs.filter((id) =>
-        existingPackageIds.includes(id),
-      );
-      throw new NotFoundException(
-        `Packages with ids ${duplicatePackageIds.join(
-          ', ',
-        )} are already assigned to user`,
-      );
-    }
-
-    const packages = await this.packageModel
-      .find({ _id: { $in: packs } })
-      .exec();
-    if (packages.length !== packs.length) {
-      const missingPackageIds = packs.filter(
-        (packageId) => !packages.some((p) => p._id.equals(packageId)),
-      );
-      throw new NotFoundException(
-        `Packages with ids ${missingPackageIds.join(', ')} not found`,
-      );
-    }
-
-    packages.map((pack) => {
-      pack.user = new mongoose.Types.ObjectId(userId);
-    });
-    user.packages.push(...packs.map((id) => new mongoose.Types.ObjectId(id)));
-
-    await user.save();
-
-    for (const pack of packages) {
-      await pack.save();
-    }
-
-    return user;
   }
 }
