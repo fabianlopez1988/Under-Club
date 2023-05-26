@@ -3,6 +3,7 @@ import userReducer from './user';
 import formSwornReducer from './formSworn';
 import logger from 'redux-logger';
 import dateReducer from './dateSelected';
+import eventReducer from './events';
 
 export const store = configureStore({
   middleware: (getDefaultMiddelware) =>
@@ -14,5 +15,6 @@ export const store = configureStore({
     user: userReducer,
     form: formSwornReducer,
     date: dateReducer,
+    events: eventReducer,
   },
 });
