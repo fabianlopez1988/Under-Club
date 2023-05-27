@@ -1,0 +1,594 @@
+.navbar-container {
+  position: absolute;
+  z-index: 2;
+  justify-content: center;
+  width: 100%;
+  font-size: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.ul-navbar {
+  position: initial;
+  margin: 0;
+}
+
+.ul-navbar li ul {
+  list-style: none;
+  display: none;
+  position: absolute;
+  min-width: 140px;
+}
+
+.ul-navbar li:hover > ul {
+  display: block;
+}
+
+.ul-navbar li a {
+  text-decoration: none;
+  color: white;
+}
+
+.ul-navbar li ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.ul-navbar li a:hover {
+  color: #8342ea;
+  transition: 0.3s;
+}
+
+.ul-navbar li ul li a:hover {
+  color: #8342ea;
+  transition: 0.3s;
+}
+
+#our-club-navbar {
+  cursor: pointer;
+}
+
+#our-club-navbar:hover {
+  color: #8342ea;
+  transition: 0.3s;
+}
+
+.logo-fixed img {
+  height: 60px;
+}
+
+.navbar-waveform {
+  height: 80px;
+  width: 80px;
+}
+
+.burguer {
+  display: none;
+}
+
+#burger-background {
+  position: fixed;
+}
+
+.loader-music {
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.loader-music .stroke-music {
+  display: block;
+  position: relative;
+  background-color: white;
+  height: 100%;
+  width: 5px;
+  border-radius: 30px;
+  margin: 0 1px;
+  animation: animate 1.2s linear infinite;
+}
+
+@keyframes animate {
+  50%{
+      height: 20%;
+  }
+  100%{
+      height: 100%;
+  }
+}
+
+.stroke-music:nth-child(1){
+  animation-delay: 0s;
+}
+
+.stroke-music:nth-child(2){
+  animation-delay: 0.3s;
+}
+
+.stroke-music:nth-child(3){
+  animation-delay: 0.6s;
+}
+
+.stroke-music:nth-child(4){
+  animation-delay: 0.9s;
+}
+
+.stroke-music:nth-child(5){
+  animation-delay: 0.6s;
+}
+
+.stroke-music:nth-child(6){
+  animation-delay: 0.3s;
+}
+
+.stroke-music:nth-child(7){
+  animation-delay: 0s;
+} 
+
+/* MEDIA QUERIES */
+/* Notebook */
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  nav {
+    padding-top: 16px;
+  }
+
+  .logo-fixed img {
+    height: 56px;
+  }
+
+  nav ul li {
+    padding: 10px 15px;
+  }
+}
+
+/* Tablet acostada */
+
+@media only screen and (min-width: 915px) and (max-width: 1024px) {
+  .navbar-container {
+    font-size: 19px;
+  }
+
+  nav {
+    padding-top: 14px;
+  }
+
+  .logo-fixed img {
+    height: 52px;
+  }
+
+  nav ul li {
+    padding: 10px 12px;
+  }
+}
+
+@media only screen and (min-width: 858px) and (max-width: 915px) {
+  .navbar-container {
+    font-size: 18px;
+  }
+
+  nav {
+    padding-top: 14px;
+  }
+
+  .logo-fixed img {
+    height: 50px;
+  }
+
+  nav ul li {
+    padding: 10px 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 858px) {
+  .navbar-container {
+    font-size: 16px;
+  }
+
+  nav {
+    padding-top: 14px;
+  }
+
+  .logo-fixed img {
+    height: 48px;
+  }
+
+  nav ul li {
+    padding: 10px 8px;
+  }
+
+  .loader-music {
+    height: 15px;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 580px) and (max-width: 768px) {
+  .navbar-container {
+    font-size: 18px;
+  }
+
+  nav {
+    padding-top: 12px;
+  }
+
+  .logo-fixed img {
+    height: 48px;
+  }
+
+  nav ul li {
+    padding: 20px;
+  }
+
+  #our-club-navbar:hover {
+    color: #8342ea;
+    height: 25%;
+    transition: 0.5s;
+    position: relative;
+  }
+  
+  .ul-navbar li{
+    border: 1px solid;
+  }
+
+  .burguer {
+    display: block;
+  }
+
+  .li-waveform{
+    border: none;
+    display: none;
+  }
+
+  .ul-navbar {
+    position: absolute;
+    top: -700px;
+    left: -2000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transition: left 0.3s;
+  }
+
+  .ul-navbar.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    height: 100%;
+  }
+
+  .ul-navbar li:hover > ul {
+    display: flex;
+    /* flex-direction: column; */
+    position: absolute;
+    top: 58%;
+    left: 47.7%;
+    transform: translate(-50%, -50%);
+  }
+
+  .ul-navbar li ul li{
+    padding: 10px ;
+    border: none
+  }
+  
+  #burger-background {
+    background-color: black;
+    top: -700px;
+    left: -1000px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  #burger-background.active {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 580px) {
+  .navbar-container {
+    font-size: 18px;
+  }
+
+  nav {
+    padding-top: 12px;
+  }
+
+  .logo-fixed img {
+    height: 46px;
+  }
+
+  nav ul li {
+    padding: 20px;
+  }
+
+  #our-club-navbar:hover {
+    color: #8342ea;
+    height: 25%;
+    transition: 0.5s;
+    position: relative;
+  }
+  
+  .ul-navbar li{
+    border: 1px solid;
+  }
+
+  .burguer {
+    display: block;
+  }
+
+  .li-waveform{
+    border: none;
+    display: none;
+  }
+
+  .ul-navbar {
+    position: absolute;
+    top: -700px;
+    left: -2000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transition: left 0.3s;
+  }
+
+  .ul-navbar.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    height: 100%;
+  }
+
+  .ul-navbar li:hover > ul {
+    display: flex;
+    /* flex-direction: column; */
+    position: absolute;
+    top: 58%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+  }
+
+  .ul-navbar li ul li{
+    padding: 10px ;
+    border: none
+  }
+  
+  #burger-background {
+    background-color: black;
+    top: -700px;
+    left: -1000px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  #burger-background.active {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Celu acostado */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .navbar-container {
+    font-size: 18px;
+  }
+
+  nav {
+    padding-top: 12px;
+  }
+
+  .logo-fixed img {
+    height: 45px;
+  }
+
+  nav ul li {
+    padding: 20px;
+  }
+
+  #our-club-navbar:hover {
+    color: #8342ea;
+    height: 25%;
+    transition: 0.5s;
+    position: relative;
+  }
+
+  .ul-navbar li{
+    border: 1px solid;
+  }
+
+  .burguer {
+    display: block;
+  }
+
+  .li-waveform{
+    border: none;
+    display: none;
+  }
+
+  .ul-navbar {
+    position: absolute;
+    top: -700px;
+    left: -2000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transition: left 0.3s;
+  }
+
+  .ul-navbar.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    height: 100%;
+  }
+
+  .ul-navbar li:hover > ul {
+    display: flex;
+    /* flex-direction: column; */
+    position: absolute;
+    top: 60%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+  }
+
+  .ul-navbar li ul li{
+    padding: 8px ;
+    border: none
+  }
+  
+  #burger-background {
+    background-color: black;
+    top: -700px;
+    left: -1000px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  #burger-background.active {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Celu */
+@media only screen and (max-width: 320px) {
+  .navbar-container {
+    font-size: 18px;
+  }
+
+  nav {
+    padding-top: 12px;
+  }
+
+  .logo-fixed img {
+    height: 46px;
+  }
+
+  nav ul li {
+    padding: 20px;
+  }
+
+  #our-club-navbar:hover {
+    color: #8342ea;
+    height: 22%;
+    transition: 0.5s;
+    position: relative;
+  }
+  
+  .ul-navbar li{
+    border: 1px solid;
+  }
+
+  .burguer {
+    display: block;
+  }
+
+  .li-waveform{
+    border: none;
+    display: none;
+  }
+
+  .ul-navbar {
+    position: absolute;
+    top: -700px;
+    left: -2000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transition: left 0.3s;
+  }
+
+  .ul-navbar.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    height: 100%;
+  }
+
+  .ul-navbar li:hover > ul {
+    display: flex;
+      /* flex-direction: column; */
+    position: absolute;
+    top: 58%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+  }
+
+  .ul-navbar li ul li{
+    padding: 5px ;
+    border: none
+  }
+  
+  #burger-background {
+    background-color: black;
+    top: -700px;
+    left: -1000px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  #burger-background.active {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,35 @@
+.news-container {
+  box-sizing: border-box;
+  padding: 10% 6%;
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: justify;
+}
+
+/* para pantallas de hasta 480px de ancho en modo apaisado (celulares) */
+@media only screen and (max-width: 480px) and (orientation: landscape) {
+  .news-container {
+    padding: 10% 3%;
+  }
+}
+
+/* para pantallas de hasta 768px de ancho (tablets y notebooks pequeñas) */
+@media only screen and (max-width: 768px) {
+  .news-container {
+    padding: 10% 3%;
+  }
+}
+
+/* para pantallas de hasta 1024px de ancho (notebooks y desktops medianas) */
+@media only screen and (max-width: 1024px) {
+  .news-container {
+    padding: 20% 5%;
+  }
+}
+
+.sitioEnConstruccion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}

@@ -1,24 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.css";
+import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import NavBar from "./components/NavBar/NavBar";
+import { motion, useScroll } from "framer-motion";
+import AnimatedRoutes from "./AnimatedRoutes";
+import { useEffect, useState } from "react";
+import logo from "./assets/UClogo.jpg";
 
 function App() {
+  const { scrollYProgress } = useScroll();
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* {loading ? (
+          <div className="logo-app-loading">
+            <img className="logo-app-img" src={logo} alt="logo under"/>
+          </div>
+      ) : (
+        <div className="App">
+          <motion.div
+            className="progress-bar"
+            style={{ scaleX: scrollYProgress }}
+          />
+          <BrowserRouter>
+            <NavBar />
+            <AnimatedRoutes />
+          </BrowserRouter>
+        </div>
+      )} */}
+       <div className="App">
+          <motion.div
+            className="progress-bar"
+            style={{ scaleX: scrollYProgress }}
+          />
+          <BrowserRouter>
+            <NavBar />
+            <AnimatedRoutes />
+          </BrowserRouter>
+        </div>
+    </>
   );
 }
 

@@ -1,0 +1,92 @@
+/* .carousel-home-container {
+    display: flex;
+    justify-content: center;
+}  */
+
+/* .carousel-home-container h3 {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 75px;
+    
+}
+
+.carousel-inner img {
+    width: 100%;
+    max-height: 850px;
+}
+
+.carousel-inner{
+ height: 850px;
+ width: 100%;
+} */
+
+/* .slide {
+    display: flex;
+    justify-content: center;
+} */
+
+.carousel-caption-culture {
+    bottom: 35%;
+    left: 20%
+}
+
+.carousel-title-culture {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 100px;
+    text-align: left;
+    padding-left: 100%;
+}
+
+.carousel-resize-image {
+    margin: 0 auto !important;
+    /* width: 85% !important; */
+    height: 100%;
+    opacity: 0.5;
+}
+
+
+/* MEDIA QUERIES */
+
+/* Notebook */
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    .carousel-title-culture {
+        font-size: 50px;
+    }
+}
+
+
+/* Tablet acostada */
+@media only screen and (min-width: 768.99px) and (max-width: 1023.99px) {
+    .carousel-title-culture {
+        font-size: 50px;
+    }
+}
+
+
+  /* Tablet */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    .carousel-title-culture {
+        font-size: 30px;
+    }
+}
+
+/* Celu acostado */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .carousel-title-culture {
+        font-size: 20px;
+    }
+}
+
+
+/* Celu */
+@media only screen and (max-width: 320px) {
+    .carousel-title-culture {
+        font-size: 20px;
+    }
+}
+
+.carousel-indicators {
+    z-index: 1;
+}

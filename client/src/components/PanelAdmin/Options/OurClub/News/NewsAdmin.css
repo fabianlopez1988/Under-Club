@@ -1,0 +1,66 @@
+.news-options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10%;
+  }
+  
+  .news-options-container ul {
+    display: grid;
+    justify-items: center;
+  }
+  
+  .links-options {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .links-options:hover {
+    color: white;
+    cursor: pointer;
+  }
+  
+  .news-options-container ul button {
+    border: none;
+    border: 3px solid blueviolet;
+    background: black;
+    padding: 10px;
+    min-width: 500px;
+    width: 100%;
+    margin-top: 30px;
+    color: white;
+    font-size: 20px;
+    font-family: LeagueSpartan-Bold;
+    border-radius: 4px;
+    transition: ease-out 0.3s;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .news-options-container ul button:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    content: "";
+    background-color: blueviolet;
+    color: white;
+    opacity: 0;
+  }
+  
+  .news-options-container ul button:hover:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+  }
+  
+  
+  @media (max-width: 575.98px) {
+    .news-options-container ul button {
+      min-width: 200px;
+    }
+  }

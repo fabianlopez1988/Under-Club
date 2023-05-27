@@ -1,0 +1,220 @@
+.artists-container {
+  box-sizing: border-box;
+  padding: 10% 6%;
+  margin: 0 auto;
+}
+
+.artists-section-title {
+  font-size: 5rem;
+  padding-top: 2%;
+  padding-bottom: 5%;
+  letter-spacing: 0.4rem;
+}
+
+.accordion-button {
+  font-size: 3rem;
+  color: #8342ea;
+  border-bottom: 4px solid #8342ea;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  padding-top: 1%;
+}
+
+.accordion-button:hover {
+  color: white;
+}
+
+
+.artists-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.25fr;
+  align-items: center;
+  justify-items: end;
+}
+
+.artists-name {
+  height: 100px;
+  width: 100%;
+  font-size: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding-top: 1.5%;
+  color: #8342ea;
+}
+
+.artists-name:hover {
+  color: white;
+}
+
+
+
+
+.presskit-artists {
+  align-items: flex-end;
+}
+
+.presskit-artists:hover {
+  display: block;
+}
+
+.link {
+  padding: 0.5em 1.2em;
+  /* border: 1px solid #8342ea; */
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  transition: .3s;
+  z-index: 1;
+  text-decoration: none;
+  /* color: #8342ea; */
+  font-size: 20px;
+  width: 10rem;
+  height: 3.1rem;
+
+  margin-bottom: -5%; /*el boton mas hacia abajo para alinear con la linea*/
+
+  /*se comento en todas las querys el margin en .link*/
+}
+/*HASTA ACA*/
+
+
+.link:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.link::before {
+  content: "";
+  width: 0;
+  height: 105%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #8342ea;
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.link:hover::before {
+  width: 105%;
+}
+
+.biography {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 1.7em;
+  line-height: 2.2rem;
+  font-family: LeagueSpartan-Regular;
+  width: 95%;
+  overflow-y: auto;
+}
+
+.artists-tag-a{
+  text-decoration: none;
+  /* color: #8342ea; */
+  color: white
+}
+
+.artists-tag-a:hover{
+  color: white;
+}
+
+/* .presskit-artists {
+  display: flex;
+  justify-content: flex-end;
+} */
+
+.artists-soundcloud-container {
+  margin-top: 3%;
+}
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 1290px) and (max-width: 1420px) {
+
+}
+
+
+/* Notebook */
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .artists-name {
+    font-size: 45px;
+  }
+  .artists-section-title {
+    font-size: 60px;
+  }
+}
+
+
+/* Tablet acostada */
+@media only screen and (min-width: 768.99px) and (max-width: 1023.99px) {
+  .artists-name {
+    font-size: 45px;
+  }
+  .link {
+    font-size: 15px;
+  }
+}
+
+
+  /* Tablet */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .artists-name {
+    font-size: 30px;
+    height: 100%;
+  }
+  .link {
+    font-size: 15px;
+    padding: 0.5em 0.5em;
+  }
+  .artists-section-title {
+    font-size: 45px;
+  }
+}
+
+/* Celu acostado */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .artists-name {
+    font-size: 16px;
+    height: 50%;
+    margin: 5%;
+  }
+  .link {
+    font-size: 15px;
+    padding: 0.2em 0.5em;
+  }
+  .artists-section-title {
+    font-size: 25px;
+    margin-top: 10%;
+
+  }
+  .artists-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Celu */
+@media only screen and (max-width: 320px) {
+  .artists-name {
+    font-size: 16px;
+    height: 50%;
+    margin: 5%;
+    margin-top: 10%;
+  }
+  .link {
+    font-size: 15px;
+  }
+  .artists-section-title {
+    font-size: 20px;
+  }
+  .artists-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .link {
+    padding: 0.2em 0.5em;
+  }
+}

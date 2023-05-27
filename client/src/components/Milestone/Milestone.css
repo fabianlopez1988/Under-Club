@@ -1,0 +1,777 @@
+.milestone-container {
+  padding-top: 15%;
+}
+
+/* .milestone-container p {
+  padding: 40px 50px 40px 50px;
+} */
+
+.parrafo-container h6 {
+  padding: 40px 50px 40px 50px;
+}
+
+.parrafo-container span {
+  font-size: 24px;
+}
+
+.parrafo-container-left-milestone h6 {
+  padding: 40px 50px 40px 50px;
+}
+
+.parrafo-container-left-milestone span {
+  font-size: 24px;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: #8542ea;
+  opacity: 0.5;
+  transform-origin: 0%;
+}
+
+/*grillas para imagen y parrafo*/
+.grid-milestone {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/*centra las imagenes*/
+.tresor-img {
+  padding-left: 5%;
+  height: 24em;
+}
+
+.underground-img {
+  padding-left: 5%;
+  height: 20em;
+}
+
+.tierra-img {
+  padding-right: 5%;
+  height: 15em;
+}
+/*tamaño modificado por su alto*/
+.bassiani-img {
+  height: 55%;
+  padding-right: 3%;
+}
+
+/*divide la grilla para la imagen en 50% y se da estilos para bassiani*/
+.img-milestone-container-bassiani {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 22rem; */
+}
+
+/*divide la grilla para la imagen en 50% y se da estilos*/
+.img-milestone-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*divide la grilla para la imagen en 50% y se da estilos*/
+.parrafo-container {
+  font-family: LeagueSpartan-Regular;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+}
+
+.parrafo-container-left-milestone {
+  font-size: 24px;
+  font-family: LeagueSpartan-Regular;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  margin-left: 25%;
+}
+
+/*grilla para las lineas*/
+.grid-line {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+/*linea vertical para unir imagenes 1 y 3*/
+.line {
+  border-style: solid;
+  border-width: 45px;
+  border-color: rgba(131, 66, 234, 0.4);
+  border-right: rgba(131, 66, 234, 0.4);
+  border-bottom: rgba(131, 66, 234, 0.4);
+  border-top: rgba(131, 66, 234, 0.4);
+  height: 100px;
+  margin-top: 1%;
+}
+
+/*linea vertical para unir imagenes 2*/
+.line-center {
+  border-style: solid;
+  border-width: 45px;
+  border-color: rgba(131, 66, 234, 0.4);
+  border-left: rgba(131, 66, 234, 0.4);
+  border-bottom: rgba(131, 66, 234, 0.4);
+  border-top: rgba(131, 66, 234, 0.4);
+  height: 100px;
+  margin-top: -6%;
+}
+
+/*primera linea*/
+.line-one {
+  border-style: solid;
+  border-width: 45px;
+  border-color: rgba(131, 66, 234, 0.4);
+  border-left: rgba(131, 66, 234, 0.4);
+  border-bottom: rgba(131, 66, 234, 0.4);
+  height: 350px;
+  margin-bottom: -8%;
+}
+/*segunda linea*/
+.line-two {
+  border-style: solid;
+  border-width: 45px;
+  border-color: rgba(131, 66, 234, 0.4);
+  border-right: rgba(131, 66, 234, 0.4);
+  height: 370px;
+  margin-bottom: -3%;
+  border-bottom: rgba(131, 66, 234, 0.4);
+}
+
+.line-under {
+  border-style: solid;
+  border-width: 45px;
+  border-color: rgba(131, 66, 234, 0.4);
+  border-right: rgba(131, 66, 234, 0.4);
+  border-bottom: rgba(131, 66, 234, 0.4);
+  border-top: rgba(131, 66, 234, 0.4);
+  height: 220px;
+  margin-top: -3%;
+}
+/*tercera linea*/
+.line-three {
+  border-style: solid;
+  border-width: 45px;
+  border-color: rgba(131, 66, 234, 0.4);
+  border-left: rgba(131, 66, 234, 0.4);
+  border-bottom: rgba(131, 66, 234, 0.4);
+  height: 100px;
+  margin-bottom: 2%;
+}
+
+.banner-milestones {
+  background-color: rgba(131, 66, 234, 0.4);
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.banner-milestones-text {
+  font-size: 40px;
+  color: white;
+  padding: 2% !important;
+  margin-bottom: 0rem;
+  margin-top: 5%;
+  padding-left: 10% !important;
+  padding-right: 10% !important;
+  text-transform: uppercase;
+}   
+
+.line-center-gracias {
+  border-style: solid;
+  border-width: 45px;
+  border-color: rgba(131, 66, 234, 0.4);
+  border-left: rgba(131, 66, 234, 0.4);
+  border-bottom: rgba(131, 66, 234, 0.4);
+  border-top: rgba(131, 66, 234, 0.4);
+  height: 55px;
+}
+
+.line-four-small {
+  border-style: solid;
+  border-width: 45px;
+  border-color: rgba(131, 66, 234, 0.4);
+  border-right: rgba(131, 66, 234, 0.4);
+  border-left: rgba(131, 66, 234, 0.4);
+  border-bottom: rgba(131, 66, 234, 0.4);
+}
+
+/*grilla para la última linea*/
+.exception {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr 1fr;
+}
+
+.text-gracias-milestone {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0;
+  margin-right: 2%;
+  font-size: 40px;
+  color: #8542ea;
+}
+
+.logo-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1500px) {
+  .bassiani-img {
+    height: 20em;
+    padding-right: 3%;
+  }
+
+  .parrafo-container {
+    width: 100%;
+    margin-left: -10%;
+  }
+
+  .parrafo-container span {
+    font-size: 20px;
+  }
+
+  .parrafo-container-left-milestone span {
+    font-size: 20px;
+  }
+
+  .line {
+    margin-top: 0%;
+  }
+
+  .line-one {
+    margin-bottom: 0%;
+  }
+
+  .line-center {
+    margin-top: 0%;
+  }
+
+  .line-two {
+    margin-bottom: 0%;
+  }
+
+  .line-under {
+    margin-top: 0%;
+  }
+
+  .parrafo-container-left-milestone {
+    width: 100%;
+    margin-left: 10%;
+  }
+
+  .banner-milestones-text {
+    font-size: 40px;
+  }
+
+  .text-gracias-milestone {
+    margin-top: 0%;
+    margin-right: 5%;
+    font-size: 40px;
+  }
+
+  .exception {
+    display: grid;
+    grid-template-columns: 1.4fr 1.5fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .grid-milestone {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+  }
+
+  .underground-img {
+    padding-left: 5%;
+    height: 17em;
+  }
+
+  .bassiani-img {
+    height: 18em;
+    padding-right: 3%;
+  }
+
+  .tierra-img {
+    padding-right: 8%;
+    height: 8em;
+  }
+
+  .inversa {
+    grid-template-columns: 1fr 0.5fr;
+  }
+
+  .grid-line {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+  }
+
+  .line {
+    border-style: solid;
+    border-width: 30px;
+    border-color: rgba(131, 66, 234, 0.4);
+    border-right: rgba(131, 66, 234, 0.4);
+    border-bottom: rgba(131, 66, 234, 0.4);
+    border-top: rgba(131, 66, 234, 0.4);
+    height: 80px;
+    margin-top: -2%;
+  }
+
+  .line-center {
+    border-style: solid;
+    border-width: 30px;
+    border-color: rgba(131, 66, 234, 0.4);
+    border-left: rgba(131, 66, 234, 0.4);
+    border-bottom: rgba(131, 66, 234, 0.4);
+    border-top: rgba(131, 66, 234, 0.4);
+    height: 80px;
+    margin-top: -1%;
+  }
+
+  .line-one {
+    border-style: solid;
+    border-width: 30px;
+    border-color: rgba(131, 66, 234, 0.4);
+    border-left: rgba(131, 66, 234, 0.4);
+    border-bottom: rgba(131, 66, 234, 0.4);
+    height: 330px;
+    margin-bottom: -2%;
+  }
+
+  .line-two {
+    border-style: solid;
+    border-width: 30px;
+    border-color: rgba(131, 66, 234, 0.4);
+    border-right: rgba(131, 66, 234, 0.4);
+    height: 350px;
+    margin-bottom: -3%;
+    border-bottom: rgba(131, 66, 234, 0.4);
+  }
+
+  .line-under {
+    border-style: solid;
+    border-width: 30px;
+    border-color: rgba(131, 66, 234, 0.4);
+    border-right: rgba(131, 66, 234, 0.4);
+    border-bottom: rgba(131, 66, 234, 0.4);
+    border-top: rgba(131, 66, 234, 0.4);
+    height: 200px;
+    margin-top: -4%;
+  }
+
+  .line-three {
+    border-style: solid;
+    border-width: 30px;
+    border-color: rgba(131, 66, 234, 0.4);
+    border-left: rgba(131, 66, 234, 0.4);
+    border-bottom: rgba(131, 66, 234, 0.4);
+    height: 80px;
+  }
+
+  .parrafo-container {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  .parrafo-container span {
+    font-size: 18px;
+  }
+
+  .parrafo-container-left-milestone span {
+    font-size: 18px;
+  }
+
+
+  .parrafo-container-left-milestone {
+    width: 100%;
+    margin-left: 5%;
+  }
+
+  .banner-milestones-text {
+    font-size: 25px;
+  }
+
+  .text-gracias-milestone {
+    margin-top: 2%;
+    margin-right: 5%;
+    font-size: 25px;
+  }
+
+  .line {
+    margin-top: 5%;
+  }
+
+  .line-center-gracias {
+    border-style: solid;
+    border-width: 30px;
+    border-color: rgba(131, 66, 234, 0.4);
+    border-left: rgba(131, 66, 234, 0.4);
+    border-bottom: rgba(131, 66, 234, 0.4);
+    border-top: rgba(131, 66, 234, 0.4);
+    height: 55px;
+  }
+
+  .line-four-small {
+    border-style: solid;
+    border-width: 30px;
+    border-color: rgba(131, 66, 234, 0.4);
+    border-right: rgba(131, 66, 234, 0.4);
+    border-left: rgba(131, 66, 234, 0.4);
+    border-bottom: rgba(131, 66, 234, 0.4);
+  }
+
+  .exception {
+    display: grid;
+    grid-template-columns: 1.4fr 1.5fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .grid-milestone {
+    display: flex;
+    grid-template-columns: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tresor-img {
+    padding-left: 0%;
+  }
+
+  .underground-img {
+    padding-left: 0%;
+    height: 17em;
+  }
+
+  .bassiani-img {
+    height: 18em;
+    padding-right: 0%;
+  }
+
+  .tierra-img {
+    padding-right: 0%;
+    height: 10em;
+  }
+
+  .inversa {
+    grid-template-columns: none;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .exception {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.1fr;
+    height: 20px;
+  }
+
+  .line {
+    border-style: none;
+  }
+
+  .line-center {
+    border-style: none;
+  }
+
+  .line-one {
+    border-style: none;
+    height: 50px;
+  }
+
+  .line-two {
+    border-style: none;
+    height: 50px;
+  }
+
+  .line-under {
+    border-style: none;
+    height: 50px;
+  }
+
+  .line-three {
+    border-style: none;
+  }
+
+  .parrafo-container {
+    width: 100%;
+  }
+
+  .parrafo-container span {
+    font-size: 18px;
+  }
+
+
+  .parrafo-container-left-milestone {
+    width: 100%;
+    margin-left: 5%;
+  }
+
+  .parrafo-container-left-milestone span {
+    font-size: 18px;
+  }
+
+  .banner-milestones-text {
+    font-size: 25px;
+    padding-top: 5% !important;
+    padding-bottom: 5% !important;
+  }
+
+  .text-gracias-milestone {
+    /* margin-right: -100%;
+    font-size: 20px; */
+    display: none;
+  }
+
+  .line-center-gracias {
+    border-style: none;
+  }
+
+  .line-four-small {
+    border-style: none;
+  }
+
+  .line-four-small div {
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 340px) and (max-width: 480px) {
+  .milestone-container {
+    padding-top: 25%;
+  }
+
+  .grid-milestone {
+    display: flex;
+    grid-template-columns: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tresor-img {
+    padding-left: 0%;
+    height: 14em
+  }
+
+  .underground-img {
+    padding-left: 0%;
+    height: 14em;
+  }
+
+  .bassiani-img {
+    height: 14em;
+    padding-right: 0%;
+  }
+
+  .tierra-img {
+    padding-right: 0%;
+    height: 8em;
+  }
+
+  .inversa {
+    grid-template-columns: none;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .exception {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.1fr;
+    height: 20px;
+  }
+
+  .line {
+    border-style: none;
+  }
+
+  .line-center {
+    border-style: none;
+  }
+
+  .line-one {
+    border-style: none;
+    height: 50px;
+
+  }
+
+  .line-two {
+    border-style: none;
+    height: 50px;
+  }
+
+  .line-under {
+    border-style: none;
+    height: 50px;
+
+  }
+
+  .line-three {
+    border-style: none;
+  }
+
+  .parrafo-container {
+    width: 100%;
+  }
+
+  .parrafo-container span {
+    font-size: 16px;
+  }
+
+  .parrafo-container-left-milestone span {
+    font-size: 16px;
+  }
+
+  .parrafo-container-left-milestone {
+    width: 100%;
+    margin-left: 5%;
+  }
+
+  .banner-milestones-text {
+    font-size: 18px;
+    padding-top: 5% !important;
+    padding-bottom: 5% !important;
+  }
+
+  .text-gracias-milestone {
+    /* margin-right: -100%;
+    font-size: 18px; */
+    display: none;
+  }
+
+  .line-center-gracias {
+    border-style: none;
+  }
+
+  .line-four-small {
+    border-style: none;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .milestone-container {
+    padding-top: 25%;
+  }
+
+  .grid-milestone {
+    display: flex;
+    grid-template-columns: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tresor-img {
+    padding-left: 0%;
+    height: 10em
+  }
+
+  .underground-img {
+    padding-left: 0%;
+    height: 10em;
+  }
+
+  .bassiani-img {
+    height: 10em;
+    padding-right: 0%;
+  }
+
+  .tierra-img {
+    padding-right: 0%;
+    height: 6em;
+  }
+
+  .inversa {
+    grid-template-columns: none;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .exception {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.1fr;
+    height: 20px;
+  }
+
+  .line {
+    border-style: none;
+  }
+
+  .line-center {
+    border-style: none;
+  }
+
+  .line-one {
+    border-style: none;
+    height: 30px;
+
+  }
+
+  .line-two {
+    border-style: none;
+    height: 30px;
+  }
+
+  .line-under {
+    border-style: none;
+    height: 30px;
+
+  }
+
+  .line-three {
+    border-style: none;
+  }
+
+  .parrafo-container {
+    width: 100%;
+  }
+
+  .parrafo-container span {
+    font-size: 16px;
+  }
+
+  .parrafo-container-left-milestone span {
+    font-size: 16px;
+  }
+
+
+  .parrafo-container-left-milestone {
+    width: 100%;
+    margin-left: 5%;
+  }
+
+  .banner-milestones-text {
+    font-size: 16px;
+    padding-top: 5% !important;
+    padding-bottom: 5% !important;
+  }
+
+  .text-gracias-milestone {
+    /* margin-right: -100%;
+    font-size: 16px; */
+    display: none;
+  }
+
+  .line-center-gracias {
+    border-style: none;
+  }
+
+  .line-four-small {
+    border-style: none;
+  }
+}

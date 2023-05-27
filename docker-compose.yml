@@ -7,19 +7,16 @@ services:
       context: ./api
       dockerfile: Dockerfile
     ports:
-      - 5000:5000
+      - 6000:6000
     volumes:
       - ./api/:/api
 
   client:
-    image: client:latest
-    build:
-      context: ./client
-      dockerfile: Dockerfile
+    build: ./client
     environment:
-      PORT: 3000
+      PORT: 3031
     ports:
-      - 3000:3000
+      - "3031:3031"
     volumes:
       - ./client/public:/client/public
       - ./client/src:/client/src
@@ -31,6 +28,6 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=admin
     command: mongod --bind_ip_all
     ports:
-      - 27017:27017
+      - 5432:5432
     volumes:
       - ./mongo_data:/data/db
