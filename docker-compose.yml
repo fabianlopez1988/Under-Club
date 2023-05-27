@@ -25,18 +25,18 @@ services:
     networks:
       - mynetwork
 
-  mongodb:
-    image: mongo:latest
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=admin
-      - MONGO_INITDB_ROOT_PASSWORD=admin
-    command: mongod --bind_ip_all
-    ports:
-      - 27017:27017
-    volumes:
-      - ./mongo_data:/data/db
-    networks:
-      - mynetwork
+  # mongodb:
+  #   image: mongo:latest
+  #   environment:
+  #     - MONGO_INITDB_ROOT_USERNAME=admin
+  #     - MONGO_INITDB_ROOT_PASSWORD=admin
+  #   command: mongod --bind_ip_all
+  #   ports:
+  #     - 27017:27017
+  #   volumes:
+  #     - ./mongo_data:/data/db
+  #   networks:
+  #     - mynetwork
 
 networks:
   mynetwork:

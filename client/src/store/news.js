@@ -1,25 +1,26 @@
 import { createAsyncThunk, createReducer } from "@reduxjs/toolkit";
 import axios from "axios";
+import { apiUrl } from "../utils/apiUrl";
 
 export const addNews = createAsyncThunk("ADD_NEW", (data) => {
-  return axios.post("/news", data).then((newData) => newData.data);
+  return axios.post(`${apiUrl}/news`, data).then((newData) => newData.data);
 });
 
 export const updateNews = createAsyncThunk("UPDATE_NEW", (data) => {
   const id = data.id;
-  return axios.put(`/news/${id}`, data).then((update) => update.data);
+  return axios.put(`${apiUrl}/news/${id}`, data).then((update) => update.data);
 });
 
 export const deleteNews = createAsyncThunk("DELETE_NEW", (id) => {
-  return axios.delete(`/news/${id}`);
+  return axios.delete(`${apiUrl}/news/${id}`);
 });
 
 export const getAllNews = createAsyncThunk("GET_ALL_NEW", () => {
-  return axios.get("/news").then((news) => news.data);
+  return axios.get(`${apiUrl}/news`).then((news) => news.data);
 });
 
 export const getNews = createAsyncThunk("GET_NEW", (id) => {
-  return axios.get(`/news/${id}`).then((newData) => newData.data);
+  return axios.get(`${apiUrl}/news/${id}`).then((newData) => newData.data);
 });
 
 const newReducer = createReducer(null, {

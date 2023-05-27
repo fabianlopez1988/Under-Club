@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { getAllNews } from "../../store/news";
 import axios from "axios";
 import "./LatestNews.css";
+import { apiUrl } from "../../utils/apiUrl"
 
 const LatestNews = () => {
   const [allNews, setAllNews] = useState([]);
@@ -12,7 +13,7 @@ const LatestNews = () => {
 
   useEffect(() => {
     // dispatch(getAllNews()).then((res) => console.log(res.data));
-    axios.get("/api/news").then((news) => setAllNews(news.data));
+    axios.get(`${apiUrl}/news`).then((news) => setAllNews(news.data));
   }, []);
 
   return (
