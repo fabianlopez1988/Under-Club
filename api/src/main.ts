@@ -22,8 +22,6 @@ async function bootstrap() {
     .setVersion('1.0')
     .addTag('users')
     .addTag('auth')
-    .addTag('packages')
-    .addTag('form-sworn')
     .addTag('agency')
     .addTag('residents')
     .addTag('episode')
