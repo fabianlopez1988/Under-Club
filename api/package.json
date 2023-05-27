@@ -37,7 +37,7 @@
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0"
   },
-  "proxy": "http://mongodb:5432",
+  "proxy": "http://mongodb:27017",
   "devDependencies": {
     "@nestjs/cli": "^9.0.0",
     "@nestjs/swagger": "^6.3.0",

@@ -10,6 +10,8 @@ services:
       - 6000:6000
     volumes:
       - ./api/:/api
+    networks:
+      - mynetwork
 
   client:
     build: ./client
@@ -20,6 +22,8 @@ services:
     volumes:
       - ./client/public:/client/public
       - ./client/src:/client/src
+    networks:
+      - mynetwork
 
   mongodb:
     image: mongo:latest
@@ -28,6 +32,11 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=admin
     command: mongod --bind_ip_all
     ports:
-      - 5432:5432
+      - 27017:27017
     volumes:
       - ./mongo_data:/data/db
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:

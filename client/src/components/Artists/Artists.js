@@ -13,7 +13,7 @@ const Artists = () => {
   }, []);
 
   useEffect(() => {
-    axios.get("/api/residents").then((res) => setResident(res.data));
+    axios.get("/residents").then((res) => setResident(res.data));
   }, []);
 
   return (
