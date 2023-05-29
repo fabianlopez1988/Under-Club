@@ -4,6 +4,7 @@ import Carousel from "react-bootstrap/Carousel";
 import { useNavigate } from "react-router-dom";
 import "./CarouselNews.css";
 import newsEmpty from "../../assets/novedadesVacias.png";
+import { apiUrl } from "../../utils/apiUrl"
 
 const CarouselNews = () => {
   const [carouselNews, setCarouselNews] = useState([]);
@@ -13,7 +14,7 @@ const CarouselNews = () => {
 
   useEffect(() => {
     axios
-      .get("/api/news")
+      .get(`${apiUrl}/news`)
       .then((response) => {
         setCarouselNews(response.data);
         setLoading(false);

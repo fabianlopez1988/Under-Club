@@ -4,6 +4,7 @@ import "./Agency.css";
 import axios from "axios";
 import { motion, useScroll } from "framer-motion";
 import logo from "../../assets/logoUC.png";
+import { apiUrl } from "../../utils/apiUrl"
 
 const Agency = () => {
   const [resident, setResident] = useState([]);
@@ -19,7 +20,7 @@ const Agency = () => {
   }, []);
 
   useEffect(() => {
-    axios.get("/api/agency").then((res) => setResident(res.data));
+    axios.get(`${apiUrl}/agency`).then((res) => setResident(res.data));
   }, []);
 
   return (
