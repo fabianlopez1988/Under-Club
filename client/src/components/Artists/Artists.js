@@ -4,6 +4,7 @@ import "./Artists.css";
 import axios from "axios";
 import { motion } from "framer-motion";
 import ReactSoundCloud from "react-soundcloud-embedded";
+import { apiUrl } from "../../utils/apiUrl";
 
 const Artists = () => {
   const [resident, setResident] = useState([]);
@@ -13,7 +14,7 @@ const Artists = () => {
   }, []);
 
   useEffect(() => {
-    axios.get("/residents").then((res) => setResident(res.data));
+    axios.get(`${apiUrl}/residents`).then((res) => setResident(res.data));
   }, []);
 
   return (

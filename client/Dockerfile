@@ -1,5 +1,7 @@
 FROM node:latest
 
+ENV REACT_APP_URL_API_DEVELOPMENT=$REACT_APP_URL_API_DEVELOPMENT
+
 WORKDIR /client
 
 COPY ./package.json package.json
