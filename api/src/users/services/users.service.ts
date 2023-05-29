@@ -5,15 +5,11 @@ import { UserDocument } from '../entities/user.entity';
 import { CreateUserDto, UpdateUserDto } from '../dtos/user.dto';
 import * as bcrypt from 'bcrypt';
 import { NotFoundException } from '@nestjs/common';
-import { PackageDocument } from 'src/packages/entities/packages.entity';
-import mongoose from 'mongoose';
 
 @Injectable()
 export class UsersService {
   constructor(
     @InjectModel('user') private readonly userModel: Model<UserDocument>,
-    @InjectModel('package')
-    private readonly packageModel: Model<PackageDocument>,
   ) {}
 
   async createUser(createUserDto: CreateUserDto): Promise<CreateUserDto> {

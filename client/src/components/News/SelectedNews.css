@@ -1,0 +1,153 @@
+.selectedselectedNews-container {
+  box-sizing: border-box;
+  padding: 10% 6%;
+  margin: 0 auto;
+  width: 1000px;
+  text-align: justify;
+}
+
+.selectedNews-photo {
+  width: 800px;
+  height: 500px;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.selectedNews-title {
+  font-size: 3.5rem;
+  margin-top: 2%;
+  text-transform: uppercase;
+}
+
+.selectedNews-date {
+  font-size: 18px;
+  font-family: LeagueSpartan-Regular;
+  font-style: italic;
+}
+
+.selectedNews-body {
+  margin-top: 5%;
+  font-family: LeagueSpartan-Regular;
+  font-size: 22px;
+}
+
+.selectedNews-description {
+  font-size: 22px;
+  padding-top: 5%;
+}
+
+.selectedNews-container {
+  box-sizing: border-box;
+  padding: 10% 6%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+/* para pantallas de hasta 480px de ancho en modo apaisado (celulares) */
+@media only screen and (max-width: 480px) and (orientation: landscape) {
+  .selectedNews-container {
+    padding: 10% 3%;
+  }
+
+  .selectedNews-photo {
+    width: 100%;
+    height: auto;
+  }
+
+  .selectedNews-title {
+    font-size: 2rem;
+  }
+
+  .selectedNews-date {
+    font-size: 14px;
+  }
+
+  .selectedNews-body {
+    font-size: 16px;
+  }
+
+  .selectedNews-description {
+    font-size: 16px;
+  }
+}
+
+/* para pantallas de hasta 768px de ancho (tablets y notebooks pequeñas) */
+@media only screen and (max-width: 768px) {
+  .selectedNews-container {
+    padding: 10% 3%;
+  }
+
+  .selectedNews-photo {
+    width: 100%;
+    height: auto;
+  }
+
+  .selectedNews-title {
+    font-size: 2.5rem;
+  }
+
+  .selectedNews-date {
+    font-size: 16px;
+  }
+
+  .selectedNews-body {
+    font-size: 18px;
+  }
+
+  .selectedNews-description {
+    font-size: 18px;
+  }
+}
+
+/* para pantallas de hasta 1024px de ancho (notebooks y desktops medianas) */
+@media only screen and (max-width: 1024px) {
+  .selectedNews-container {
+    padding: 20% 5%;
+  }
+
+  .selectedNews-photo {
+    width: 100%;
+    height: auto;
+  }
+
+  .selectedNews-title {
+    font-size: 2rem;
+    padding-top: 10%;
+  }
+
+  .selectedNews-date {
+    font-size: 16px;
+  }
+
+  .selectedNews-body {
+    font-size: 18px;
+  }
+
+  .selectedNews-description {
+    font-size: 18px;
+  }
+}
+
+/* para pantallas de más de 1440px de ancho (pantallas grandes) */
+@media only screen and (min-width: 1440px) {
+  .selectedNews-photo {
+    width: 800px;
+    height: 500px;
+  }
+
+  .selectedNews-title {
+    font-size: 4rem;
+  }
+
+  .selectedNews-date {
+    font-size: 24px;
+  }
+
+  .selectedNews-body {
+    font-size: 24px;
+  }
+
+  .selectedNews-description {
+    font-size: 24px;
+  }
+}

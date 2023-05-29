@@ -1,0 +1,156 @@
+.flyers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5%;
+  width: 100%;
+}
+
+.flyers-grid img {
+  width: 500px;
+  height: 500px;
+  padding: 5%;
+}
+
+.flyers-grid img:hover {
+  opacity: 90%;
+}
+
+.event-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#tickets-button {
+  text-transform: uppercase;
+  width: 100%;
+  border: none;
+  background: rgb(255, 255, 255);
+  padding: 15px 30px;
+  margin-top: 30px;
+  color: black;
+  font-size: 25px;
+  border-radius: 25px;
+  transition: ease-out 0.3s;
+  z-index: 1;
+  position: relative;
+}
+
+#tickets-button:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  content: "";
+  background-color: blueviolet;
+  color: white;
+  opacity: 0;
+  border-radius: 25px;
+}
+
+#tickets-button:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+
+/* MEDIA QUERIES */
+
+/* Notebook */
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .flyers-grid img {
+    width: 400px;
+    height: 400px;
+    padding: 5%;
+    margin-top: 10%;
+  }
+  /* #tickets-button {
+    width: 100%;
+    padding: 5px;
+    margin-top: 15px;
+  } */
+}
+
+/* Tablet acostada */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .flyers-grid img {
+    width: 300px;
+    height: 300px;
+    padding: 5%;
+    margin-top: 10%;
+  }
+  #tickets-button {
+    width: 100%;
+    padding: 5px;
+    margin-top: 15px;
+    padding: 4px 15px;
+    margin-top: 15px;
+    font-size: 25px;
+    border-radius: 20px;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .flyers-grid img {
+    width: 300px;
+    height: 300px;
+    padding: 5%;
+    margin-top: 10%;
+  }
+  #tickets-button {
+    width: 100%;
+    padding: 5px;
+    margin-top: 15px;
+    padding: 4px 15px;
+    margin-top: 15px;
+    font-size: 25px;
+    border-radius: 20px;
+  }
+}
+
+/* Celu acostado */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .flyers-grid img {
+    width: 250px;
+    height: 250px;
+    padding: 0%;
+    margin-top: 10%;
+  }
+  #tickets-button {
+    width: 100%;
+    padding: 5px;
+    margin-top: 15px;
+    padding: 2px 10px;
+    margin-top: 15px;
+    font-size: 20px;
+    border-radius: 15px;
+  }
+  
+
+}
+
+/* Celu */
+@media only screen and (max-width: 320px) {
+  .flyers-grid img {
+    width: 250px;
+    height: 250px;
+    padding: 0%;
+    margin-top: 10%;
+  }
+  #tickets-button {
+    width: 100%;
+    padding: 5px;
+    margin-top: 15px;
+    padding: 2px 10px;
+    margin-top: 15px;
+    font-size: 16px;
+    border-radius: 15px;
+  }
+}

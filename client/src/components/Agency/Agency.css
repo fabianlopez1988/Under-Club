@@ -1,0 +1,912 @@
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+.agency-biography::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.agency-biography::-webkit-scrollbar:vertical {
+  width: 10px;
+}
+
+.agency-biography::-webkit-scrollbar-button:increment,
+.agency-biography::-webkit-scrollbar-button {
+  display: none;
+}
+
+.agency-biography::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.agency-biography::-webkit-scrollbar-thumb {
+  background-color: #f1f2f3;
+  border-radius: 20px;
+  border: 2px solid #666565;
+}
+
+.agency-biography::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.agency-container {
+  box-sizing: border-box;
+  padding: 10% 6%;
+  margin: 0 auto;
+}
+
+.agency-section-title {
+  font-size: 5rem;
+  padding-top: 2%;
+  padding-bottom: 5%;
+  letter-spacing: 0.4rem;
+}
+
+.accordion-button {
+  font-size: 3rem;
+  color: #2b70e4;
+  border-bottom: 4px solid #2b70e4;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  padding-top: 1%;
+}
+
+.accordion-button:hover {
+  color: white;
+}
+
+.agency-accordion-body_modifier {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(100px, 800px);
+}
+
+.agency-accordion-right {
+  display: flex;
+  /* align-items: flex-end; */
+  justify-content: flex-end;
+  height: auto;
+}
+
+.agency-photo {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  margin-right: 0;
+}
+
+.agency-photo:hover {
+  filter: opacity(0.95) drop-shadow(4px 4px 2px #2b70e4);
+  transition: 0.6s;
+}
+
+.agency-accordion-left {
+  font-family: LeagueSpartan-Regular;
+  font-size: 100%;
+  height: auto;
+  display: grid;
+  grid-template-rows: 5% 1.5fr 1fr;
+}
+
+/*Boton presskit*/
+.agency-link {
+  padding: 0.5em 1.2em;
+  border: 1px solid #2b70e4;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  transition: 0.3s;
+  z-index: 1;
+  text-decoration: none;
+  color: #2b70e4;
+  font-size: 1.4rem;
+  width: 10rem;
+  height: 3.1rem;
+  margin: 3% 0;
+}
+
+.agency-link:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.agency-link::before {
+  content: "";
+  width: 0;
+  height: 105%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2b70e4;
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.agency-link:hover::before {
+  width: 105%;
+}
+
+.agency-biography {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 1.5em;
+  line-height: 2.2rem;
+  font-family: LeagueSpartan-Regular;
+  width: 95%;
+  overflow-y: auto;
+  text-align: justify;
+}
+
+.agency-tag-a {
+  text-decoration: none;
+  color: #2b70e4;
+}
+
+.agency-tag-a:hover {
+  color: white;
+}
+
+.agency-social-media ul {
+  list-style: none;
+  float: right;
+  font-size: 1.5rem;
+  padding: 10%;
+  margin: 0 10%;
+  padding-bottom: 0;
+}
+
+.agency-social-media {
+  border-left: 44px solid rgba(43, 112, 228, 0.3);
+}
+
+.container-agency {
+  display: flex;
+}
+
+.agency-social-media-query {
+  visibility: hidden;
+  width: 0;
+}
+
+.progress-bar-agency {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: rgb(43, 112, 228);
+  opacity: 0.5;
+  transform-origin: 0%;
+}
+
+.agency-country {
+  font-size: 1.7em;
+  font-family: LeagueSpartan-Regular;
+}
+
+.logo-app-loading {
+  width: 100%;
+  padding-top: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-app-img {
+  width: 10%;
+  height: 10%;
+}
+
+.accordion-header {
+  margin-bottom: 2%;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 1420px) and (max-width: 1980px) {
+  .agency-accordion-body_modifier {
+    grid-template-rows: minmax(100px, 745px);
+  }
+
+  .agency-biography {
+    margin-top: 2%;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+  }
+
+  .agency-social-media ul  {
+    margin-right: -10%;
+  }
+
+  .agency-social-media {
+    border-left: 40px solid rgba(43, 112, 228, 0.3);
+  }
+
+  .agency-section-title {
+    font-size: 4.8rem;
+  }
+
+  .agency-accordion-left {
+    height: 80%;
+    grid-template-rows: 0.1fr 2fr 0.5fr;
+  }
+
+  .agency-accordion-right {
+    height: 80%;
+  }
+}
+
+@media only screen and (min-width: 1290px) and (max-width: 1420px) {
+  .agency-accordion-body_modifier {
+    grid-template-rows: minmax(100px, 745px);
+  }
+
+  .agency-biography {
+    margin-top: 2%;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+  }
+
+  .agency-social-media {
+    border-left: 40px solid rgba(43, 112, 228, 0.3);
+  }
+
+  .agency-section-title {
+    font-size: 4.8rem;
+  }
+  .agency-accordion-left {
+    height: 80%;
+    grid-template-rows: 0.1fr 2fr 0.5fr;
+  }
+  .agency-accordion-right {
+    height: 80%;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1290px) {
+  .agency-accordion-body_modifier {
+    grid-template-rows: minmax(100px, 730px);
+  }
+
+  .agency-biography {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 1.1rem;
+  }
+
+  .agency-country {
+    font-size: 1.2rem;
+  }
+
+  .agency-social-media ul {
+    font-size: 1.4rem;
+  }
+
+  .agency-link {
+    font-size: 1.2rem;
+    width: 8.8rem;
+    height: 2.9rem;
+    margin: 4% 0;
+  }
+
+  .agency-section-title {
+    font-size: 4.2rem;
+  }
+  .agency-accordion-left {
+    height: 80%;
+    grid-template-rows: 0.1fr 2fr 0.5fr;
+  }
+
+  .agency-accordion-right {
+    height: 80%;
+  }
+}
+
+/* Notebook */
+@media only screen and (min-width: 1100px) and (max-width: 1200px) {
+  .agency-accordion-body_modifier {
+    grid-template-rows: minmax(100px, 700px);
+  }
+
+  .agency-biography {
+    font-size: 1.1rem;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  .agency-country {
+    font-size: 1.1rem;
+  }
+
+  .agency-social-media ul {
+    font-size: 1.1rem;
+  }
+
+  .agency-link {
+    font-size: 1.3rem;
+    width: 8.7rem;
+    height: 2.9rem;
+    margin: 4% 0;
+  }
+
+  .agency-section-title {
+    font-size: 3.8rem;
+  }
+
+  .accordion-button {
+    font-size: 2.1rem;
+  }
+
+  .agency-social-media {
+    border-left: 35px solid rgba(43, 112, 228, 0.3);
+  }
+  .agency-accordion-left {
+    height: 80%;
+    grid-template-rows: 0.1fr 2fr 0.5fr;
+  }
+  .agency-accordion-right {
+    height: 80%;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1100px) {
+  .agency-accordion-body_modifier {
+    grid-template-rows: minmax(100px, 610px);
+  }
+
+  .agency-biography {
+    font-size: 1rem;
+    margin-top: 4%;
+    margin-bottom: 3%;
+    line-height: 2rem;
+    /* width: 82%; */
+  }
+
+  .agency-country {
+    font-size: 1rem;
+  }
+
+  .agency-social-media ul {
+    font-size: 1rem;
+  }
+
+  .agency-link {
+    font-size: 1rem;
+    width: 8.3rem;
+    height: 2.8rem;
+    margin: 4% 0;
+  }
+
+  .agency-section-title {
+    font-size: 3.6rem;
+  }
+
+  .accordion-button {
+    font-size: 2rem;
+  }
+
+  .agency-social-media {
+    border-left: 33px solid rgba(43, 112, 228, 0.3);
+  }
+  .agency-accordion-left {
+    height: 80%;
+    grid-template-rows: 0.1fr 2fr 0.5fr;
+  }
+  .agency-accordion-right {
+    height: 80%;
+  }
+}
+
+/* Tablet acostada */
+@media only screen and (min-width: 930px) and (max-width: 1024px) {
+  .agency-accordion-body_modifier {
+    grid-template-rows: minmax(100px, 560px);
+  }
+
+  .agency-biography {
+    font-size: 1rem;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    line-height: 1.8rem;
+    /* width: 86%; */
+  }
+
+  .agency-country {
+    font-size: 16px;
+  }
+
+  .agency-social-media ul {
+    font-size: 16px;
+  }
+
+  .agency-link {
+    font-size: 16px;
+    width: 7.5rem;
+    height: 2.4rem;
+    margin: 4% 0;
+  }
+
+  .agency-section-title {
+    font-size: 3.4rem;
+  }
+
+  .accordion-button {
+    font-size: 1.7rem;
+    border-bottom: 2px solid #2b70e4;
+  }
+
+  .agency-social-media {
+    border-left: 25px solid rgba(43, 112, 228, 0.3);
+    margin-bottom: 4.5%;
+  }
+  .agency-accordion-left {
+    height: 80%;
+    grid-template-rows: 0.1fr 2fr 0.5fr;
+  }
+  .agency-accordion-right {
+    height: 80%;
+  }
+}
+
+@media only screen and (min-width: 840px) and (max-width: 930px) {
+  .agency-accordion-body_modifier {
+    grid-template-rows: minmax(100px, 515px);
+  }
+
+  .agency-biography {
+    font-size: 16px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    line-height: 1.6rem;
+    /* width: 87%; */
+  }
+
+  .agency-country {
+    font-size: 16px;
+  }
+
+  .agency-social-media ul {
+    font-size: 16px;
+    margin: 0 7%;
+  }
+
+  .agency-link {
+    font-size: 16px;
+    width: 7.1rem;
+    height: 2.3rem;
+    margin: 4% 0;
+  }
+
+  .agency-section-title {
+    font-size: 3.2rem;
+    letter-spacing: 0.3rem;
+    padding-top: 5%;
+  }
+
+  .accordion-button {
+    font-size: 1.6rem;
+    border-bottom: 2px solid #2b70e4;
+  }
+
+  .agency-social-media {
+    border-left: 24px solid rgba(43, 112, 228, 0.3);
+    margin-bottom: 4.5%;
+  }
+  .agency-accordion-left {
+    height: 80%;
+    grid-template-rows: 0.1fr 2fr 0.5fr;
+  }
+  .agency-accordion-right {
+    height: 80%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 840px) {
+  .agency-accordion-body_modifier {
+    grid-template-rows: minmax(100px, 460px);
+  }
+
+  .agency-biography {
+    font-size: 16px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    line-height: 1.4rem;
+    /* width: 87%; */
+  }
+
+  .agency-country {
+    font-size: 16px;
+  }
+
+  .agency-social-media ul {
+    font-size: 16px;
+    /* padding: 9%; */
+    margin: 0 7%;
+  }
+
+  .agency-link {
+    font-size: 0.9rem;
+    width: 6.5rem;
+    height: 2.2rem;
+    margin: 4% 0;
+  }
+
+  .agency-section-title {
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    padding-top: 5%;
+  }
+
+  .accordion-button {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #2b70e4;
+  }
+
+  .agency-social-media {
+    border-left: 23px solid rgba(43, 112, 228, 0.3);
+    /* margin-bottom: 4.5%; */
+  }
+  .agency-soundcloud-container {
+    display: none;
+  }
+  .agency-accordion-left {
+    height: 80%;
+    grid-template-rows: 0.1fr 2fr 0.5fr;
+  }
+  .agency-accordion-right {
+    height: 80%;
+  }
+}
+
+@media only screen and (min-width: 670px) and (max-width: 768px) {
+  .agency-accordion-body_modifier {
+    grid-template-rows: minmax(100px, 360px);
+    grid-template-columns: 1.3fr 1fr;
+  }
+
+  .agency-biography {
+    font-size: 16px;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    line-height: 1.3rem;
+    /* width: 92%; */
+  }
+
+  .agency-country {
+    font-size: 16px;
+  }
+
+  .agency-social-media ul {
+    font-size: 16px;
+    /* padding: 9%; */
+    margin: 0 7%;
+  }
+
+  .agency-link {
+    font-size: 16px;
+    width: 5.6rem;
+    height: 2rem;
+    margin: 4% 0;
+  }
+
+  .agency-section-title {
+    font-size: 2.7rem;
+    letter-spacing: 0.2rem;
+    padding-top: 5%;
+  }
+
+  .accordion-button {
+    font-size: 1.4rem;
+    border-bottom: 2px solid #2b70e4;
+  }
+
+  .agency-social-media {
+    border-left: none;
+    /* margin-bottom: 4.5%; */
+  }
+  .agency-soundcloud-container {
+    display: none;
+  }
+  .agency-accordion-left {
+    height: 80%;
+    grid-template-rows: 0.1fr 2fr 0.5fr;
+  }
+  .agency-accordion-right {
+    height: 80%;
+  }
+  .logo-app-loading {
+    margin-top: 30%;
+    display: none;
+  }
+
+  .logo-app-img {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+@media only screen and (min-width: 560px) and (max-width: 670px) {
+  .agency-accordion-body_modifier {
+    grid-template-rows: minmax(100px, 320px);
+    grid-template-columns: 1.3fr 1fr;
+  }
+
+  .agency-biography {
+    font-size: 16px;
+    /* margin-top: 10.5%; */
+    margin-bottom: 0%;
+    line-height: 1.3rem;
+    /* width: 92%; */
+  }
+
+  .agency-social-media ul {
+    font-size: 16px;
+    /* padding: 10.5%; */
+    margin: 0 7%;
+    padding: 2%;
+  }
+
+  .agency-link {
+    font-size: 16px;
+    width: 5.2rem;
+    height: 1.9rem;
+    margin: 4% 0;
+    padding: 0.4em 0.9em;
+  }
+
+  .agency-country {
+    font-size: 16px;
+  }
+
+  .agency-section-title {
+    font-size: 2.4rem;
+    letter-spacing: 0.2rem;
+    padding-top: 10%;
+  }
+
+  .accordion-button {
+    font-size: 1.4rem;
+    border-bottom: 2px solid #2b70e4;
+  }
+
+  .agency-social-media {
+    border-left: none;
+    /* margin-bottom: 4.5%; */
+  }
+  .agency-soundcloud-container {
+    display: none;
+  }
+  .agency-accordion-left {
+    height: 80%;
+    grid-template-rows: 0.1fr 2fr 0.5fr;
+  }
+  .agency-accordion-right {
+    height: 80%;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 560px) {
+  .agency-accordion-body_modifier {
+    display: grid;
+    grid-template-rows: minmax(100px, 275px);
+    grid-template-columns: minmax(100px, 550px);
+  }
+
+  .agency-accordion-left {
+    display: block;
+    grid-template-rows: none;
+  }
+
+  .agency-accordion-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .agency-photo {
+    width: 100%;
+    height: 100%;
+  }
+
+  .agency-biography {
+    font-size: 0.8rem;
+    margin-top: 1.5%;
+    margin-bottom: 0%;
+    line-height: 1.2rem;
+    width: 100%;
+    height: 70%;
+  }
+
+  .agency-country {
+    font-size: 0.8rem;
+  }
+
+  .agency-social-media-query ul {
+    list-style: none;
+    font-size: 16px;
+    float: left;
+    padding-top: 36%;
+    padding-bottom: 0%;
+    font-family: LeagueSpartan-Regular;
+    color: rgba(43, 112, 228, 0.3);
+  }
+
+  .agency-link {
+    font-size: 0.7rem;
+    width: 4.5rem;
+    height: 1.6rem;
+    margin: 3% 0;
+    padding: 0.4em 0.9em;
+  }
+
+  .agency-section-title {
+    font-size: 1.9rem;
+    letter-spacing: 0.2rem;
+    padding-top: 20%;
+  }
+
+  .accordion-button {
+    font-size: 1.1rem;
+    border-bottom: 2px solid #2b70e4;
+  }
+
+  .agency-social-media {
+    display: none;
+  }
+
+  .agency-social-media-query {
+    font-size: 16px;
+    visibility: visible;
+  }
+}
+
+/* Celu acostado */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .agency-accordion-body_modifier {
+    display: grid;
+    grid-template-rows: minmax(100px, 275px);
+    grid-template-columns: minmax(100px, 410px);
+  }
+
+  .agency-accordion-left {
+    display: block;
+    grid-template-rows: none;
+  }
+
+  .agency-accordion-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .agency-photo {
+    width: 100%;
+    height: 100%;
+  }
+
+  .agency-biography {
+    font-size: 0.8rem;
+    margin-top: 1.5%;
+    margin-bottom: 0%;
+    line-height: 1.2rem;
+    width: 100%;
+    height: 70%;
+  }
+
+  .agency-country {
+    font-size: 0.8rem;
+  }
+
+  .agency-social-media-query ul {
+    list-style: none;
+    font-size: 16px;
+    float: left;
+    padding-top: 36%;
+    padding-bottom: 0%;
+    font-family: LeagueSpartan-Regular;
+    color: rgba(43, 112, 228, 0.3);
+  }
+
+  .agency-link {
+    font-size: 0.7rem;
+    width: 4.5rem;
+    height: 1.6rem;
+    margin: 3% 0;
+    padding: 0.4em 0.9em;
+  }
+
+  .agency-section-title {
+    font-size: 1.9rem;
+    letter-spacing: 0.2rem;
+    padding-top: 20%;
+  }
+
+  .accordion-button {
+    font-size: 1.1rem;
+    border-bottom: 2px solid #2b70e4;
+  }
+
+  .agency-social-media {
+    display: none;
+  }
+
+  .agency-social-media-query {
+    font-size: 16px;
+    visibility: visible;
+  }
+}
+
+/* Celu */
+@media only screen and (max-width: 320px) {
+  .agency-accordion-body_modifier {
+    display: grid;
+    grid-template-rows: minmax(100px, 275px);
+    grid-template-columns: minmax(100px, 410px);
+  }
+
+  .agency-accordion-left {
+    display: block;
+    grid-template-rows: none;
+  }
+
+  .agency-accordion-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .agency-photo {
+    width: 100%;
+    height: 100%;
+  }
+
+  .agency-biography {
+    font-size: 0.8rem;
+    margin-top: 1.5%;
+    margin-bottom: 0%;
+    line-height: 1.2rem;
+    width: 100%;
+    height: 70%;
+  }
+
+  .agency-country {
+    font-size: 0.8rem;
+  }
+
+  .agency-social-media-query ul {
+    list-style: none;
+    font-size: 15px;
+    float: left;
+    padding-top: 36%;
+    padding-bottom: 0%;
+    font-family: LeagueSpartan-Regular;
+    color: rgba(43, 112, 228, 0.3);
+    padding-left: 5%;
+  }
+
+  .agency-link {
+    font-size: 0.7rem;
+    width: 4.5rem;
+    height: 1.6rem;
+    margin: 3% 0;
+    padding: 0.4em 0.9em;
+  }
+
+  .agency-section-title {
+    font-size: 1.9rem;
+    letter-spacing: 0.2rem;
+    padding-top: 20%;
+  }
+
+  .accordion-button {
+    font-size: 1.1rem;
+    border-bottom: 2px solid #2b70e4;
+  }
+
+  .agency-social-media {
+    display: none;
+  }
+
+  .agency-social-media-query {
+    font-size: 16px;
+    visibility: visible;
+  }
+}

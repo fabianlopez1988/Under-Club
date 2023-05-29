@@ -22,8 +22,6 @@ async function bootstrap() {
     .setVersion('1.0')
     .addTag('users')
     .addTag('auth')
-    .addTag('packages')
-    .addTag('form-sworn')
     .addTag('agency')
     .addTag('residents')
     .addTag('episode')
@@ -41,6 +39,6 @@ async function bootstrap() {
     },
   });
 
-  await app.listen(5000);
+  await app.listen(6000);
 }
 bootstrap();

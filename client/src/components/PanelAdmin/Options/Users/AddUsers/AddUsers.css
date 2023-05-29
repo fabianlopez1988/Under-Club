@@ -1,0 +1,14 @@
+.add-users-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+  height: 100%;
+}
+
+@media only screen and (min-width: 250px) and (max-width: 430px) {
+  .add-users-container  {
+    font-size: 14px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}

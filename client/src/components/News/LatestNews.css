@@ -1,0 +1,147 @@
+.latestNews-container {
+  width: 800px;
+  height: auto;
+}
+
+.latestNews-photo {
+  width: 800px;
+  height: 500px;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.latestNews-title {
+  font-size: 3.5rem;
+  margin-top: 2%;
+  text-transform: uppercase;
+  text-align: start;
+}
+
+.latestNews-date {
+  font-size: 18px;
+  font-family: LeagueSpartan-Regular;
+  font-style: italic;
+}
+
+.latestNews-body {
+  margin-top: 5%;
+  font-family: LeagueSpartan-Regular;
+  font-size: 22px;
+}
+
+.latestNews-news-description {
+  font-size: 22px;
+  padding-top: 5%;
+}
+
+/* para pantallas de hasta 480px de ancho en modo apaisado (celulares) */
+@media only screen and (max-width: 480px) and (orientation: landscape) {
+  .latestNews-photo {
+    width: 100%;
+    height: auto;
+  }
+
+  .latestNews-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .latestNews-title {
+    font-size: 2rem;
+  }
+
+  .latestNews-date {
+    font-size: 14px;
+  }
+
+  .latestNews-body {
+    font-size: 16px;
+  }
+
+  .latestNews-news-description {
+    font-size: 16px;
+  }
+}
+
+/* para pantallas de hasta 768px de ancho (tablets y notebooks pequeñas) */
+@media only screen and (max-width: 768px) {
+  .latestNews-photo {
+    width: 100%;
+    height: auto;
+  }
+
+  .latestNews-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .latestNews-title {
+    font-size: 2.5rem;
+  }
+
+  .latestNews-date {
+    font-size: 16px;
+  }
+
+  .latestNews-body {
+    font-size: 18px;
+  }
+
+  .latestNews-news-description {
+    font-size: 18px;
+  }
+}
+
+/* para pantallas de hasta 1024px de ancho (notebooks y desktops medianas) */
+@media only screen and (max-width: 1024px) {
+  .latestNews-photo {
+    width: 100%;
+    height: auto;
+  }
+
+  .latestNews-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .latestNews-title {
+    font-size: 2rem;
+    padding-top: 10%;
+  }
+
+  .latestNews-date {
+    font-size: 16px;
+  }
+
+  .latestNews-body {
+    font-size: 18px;
+  }
+
+  .latestNews-news-description {
+    font-size: 18px;
+  }
+}
+
+/* para pantallas de más de 1440px de ancho (pantallas grandes) */
+@media only screen and (min-width: 1440px) {
+  .latestNews-photo {
+    width: 800px;
+    height: 500px;
+  }
+
+  .latestNews-title {
+    font-size: 4rem;
+  }
+
+  .latestNews-date {
+    font-size: 24px;
+  }
+
+  .latestNews-body {
+    font-size: 24px;
+  }
+
+  .latestNews-news-description {
+    font-size: 24px;
+  }
+}

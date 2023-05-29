@@ -1,0 +1,104 @@
+@font-face {
+  font-family: LeagueSpartan-Bold;
+  src: url("../public/Fonts/LeagueSpartan-Bold.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: LeagueSpartan-Regular;
+  src: url("../public/Fonts/LeagueSpartan-Regular.ttf");
+}
+
+body {
+  font-family: LeagueSpartan-Bold;
+  margin: 0;
+  background-color: black !important;
+  color: white;
+}
+
+.parpadea {
+  animation-name: parpadeo;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name: parpadeo;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+/* parpadeo */
+@-moz-keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* .logo-app-loading {
+  width: 100%;
+  margin-top: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(131, 66, 234, 0.5);
+  border: 3px solid rgba(131, 66, 234, 0.1);
+  border-radius: 10px;
+}
+
+
+/* @media only screen and (max-width: 768px) {
+  .logo-app-loading {
+    margin-top: 30%;
+    display: none;
+  }
+
+  .logo-app-img {
+    width: 50%;
+    height: 50%;
+  }
+} */
+
+/* Celu */
+@media only screen and (max-width: 320px) {
+}
+
+

@@ -1,0 +1,15 @@
+.delete-container-user{
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-container-user {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    justify-content: center;
+    align-items: center;
+}

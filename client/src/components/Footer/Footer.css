@@ -1,0 +1,139 @@
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.25fr 1.25fr 0.75fr 0.5fr;
+  margin: 5%;
+  align-items: flex-end;
+}
+
+.footer-container h1 {
+  font-size: 18px;
+  color: white;
+}
+
+
+#links h1:hover {
+  color: #8342ea;
+  transition: .3s
+}
+
+#links a {
+  text-decoration: none;
+}
+
+#link-to-contact {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 18%;
+}
+
+
+#link-to-contact h1 {
+  color: black;
+  background-color: white;
+  height: 50px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#link-to-contact a {
+  text-decoration: none;
+}
+
+
+
+/* MEDIA QUERIES */
+
+/* Notebook */
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+}
+
+
+/* Tablet acostada */
+@media only screen and (min-width: 768.99px) and (max-width: 1023.99px) {
+  .footer-container h1 {
+    font-size: 16px;
+    color: white;
+  }
+}
+
+
+  /* Tablet */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: none;
+    margin: 5%;
+    padding-top: 10%;
+  }
+
+  .footer-container h1 {
+    font-size: 16px;
+    color: white;
+  }
+
+  #link-to-contact {
+    justify-content: flex-start;
+    padding-bottom: 0%;
+    padding-top: 2%;
+  }
+
+  #location-footer {
+    padding-top: 10%;
+  }
+}
+
+/* Celu acostado */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: none;
+    margin: 5%;
+    padding-top: 10%;
+  }
+
+  .footer-container h1 {
+    font-size: 16px;
+    color: white;
+  }
+
+  #link-to-contact {
+    justify-content: flex-start;
+    padding-bottom: 0%;
+    padding-top: 2%;
+  }
+
+  #location-footer {
+    padding-top: 10%;
+  }
+}
+
+
+/* Celu */
+@media only screen and (max-width: 320px) {
+  .footer-container {
+    grid-template-columns: none;
+    margin: 5%;
+    padding-top: 10%;
+  }
+
+  .footer-container h1 {
+    font-size: 16px;
+    color: white;
+  }
+
+  #link-to-contact {
+    justify-content: flex-start;
+    padding-bottom: 0%;
+    padding-top: 2%;
+  }
+
+  #location-footer {
+    padding-top: 10%;
+  }
+}
+
+
+
+
+
+

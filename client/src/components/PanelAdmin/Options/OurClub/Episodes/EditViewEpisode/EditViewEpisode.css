@@ -1,0 +1,60 @@
+.edit-container-episode {
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+  }
+  
+  
+  .edit-container-episode button {
+    border: none;
+    border: 3px solid blueviolet;
+    background: black;
+    padding: 10px;
+    width: 100%;
+    margin-top: 30px;
+    color: white;
+    font-size: 20px;
+    border-radius: 4px;
+    transition: ease-out 0.3s;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .edit-container-episode button:hover {
+    color: white;
+    cursor: pointer;
+  }
+  
+  .edit-container-episode button:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    content: "";
+    background-color: blueviolet;
+    opacity: 0;
+  }
+  
+  .edit-container-episode button:hover:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+  }
+  
+  .edit-container-episode textarea {
+    min-height: 10em;
+    min-width: 100%;
+  }
+  
+
+  @media only screen and (min-width: 250px) and (max-width: 430px) {
+    .edit-container-episode {
+      font-size: 14px;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }

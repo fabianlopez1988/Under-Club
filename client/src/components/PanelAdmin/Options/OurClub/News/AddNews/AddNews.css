@@ -1,0 +1,29 @@
+.add-news-container {
+  padding: 10%;
+}
+
+@media (min-width: 768px) {
+  input[type="text"],
+  input[type="date"],
+  textarea {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .add-news-container {
+    padding: 1rem;
+    padding-top: 20%;
+  }
+  
+  input[type="file"] {
+    margin-bottom: 1rem;
+  }
+  
+  button.submit {
+    margin-top: 1rem;
+  }
+}
