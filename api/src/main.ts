@@ -28,6 +28,7 @@ async function bootstrap() {
     .addTag('event')
     .addTag('new')
     .addTag('podcast')
+    .addTag('mail')
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
