@@ -15,13 +15,19 @@ export const userLogin = createAsyncThunk("USER_LOGGED", (data) => {
   return axios.post(`${apiUrl}/auth/login`, data).then((user) => {
     localStorage.setItem("user", JSON.stringify(user.data.email));
     return user.data;
-  });
+  }
+  )
 });
 
+// export const userLogout = createAsyncThunk("USER_LOGOUT", () => {
+//   return axios.post(`${apiUrl}/auth/logout`).then(() => {
+//     localStorage.removeItem("user");
+//   });
+// });
+
 export const userLogout = createAsyncThunk("USER_LOGOUT", () => {
-  return axios.post(`${apiUrl}/auth/logout`).then(() => {
-    localStorage.removeItem("user");
-  });
+  localStorage.removeItem("user");
+  return Promise.resolve();
 });
 
 export const userUpdate = createAsyncThunk("USER_UPDATE", (data) => {

@@ -37,7 +37,10 @@ export class AuthService {
     };
   }
 
-  async logout(user: CreateUserDto) {
-    return { access_token: null, msg: 'The user session has ended', user };
+  // async logout(user: CreateUserDto) {
+  //   return { access_token: null, msg: 'The user session has ended', user };
+  // }
+  async logout() {
+    return { access_token: null, msg: 'The user session has ended' };
   }
 }

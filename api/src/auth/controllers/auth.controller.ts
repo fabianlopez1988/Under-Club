@@ -19,11 +19,19 @@ export class AuthController {
     return this.authService.login(req.user);
   }
 
+  // @ApiOperation({ summary: 'Cerrar sesión' })
+  // @ApiResponse({ status: 200, description: 'Cierre de sesión exitoso' })
+  // @UseGuards(AuthGuard('local'))
+  // @Post('logout')
+  // async logout(@Request() req) {
+  //   return this.authService.logout(req.user);
+  // }
+
   @ApiOperation({ summary: 'Cerrar sesión' })
   @ApiResponse({ status: 200, description: 'Cierre de sesión exitoso' })
   @UseGuards(AuthGuard('local'))
   @Post('logout')
-  async logout(@Request() req) {
-    return this.authService.logout(req.user);
+  async logout() {
+    return this.authService.logout();
   }
 }
