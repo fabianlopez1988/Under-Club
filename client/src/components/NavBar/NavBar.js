@@ -19,7 +19,11 @@ const NavBar = () => {
   const user = JSON.parse(localStorage.getItem("user"));
 
   const handleLogout = () => {
-    dispatch(userLogout()).then(() => navigate("/login"));
+    const userData = {
+      email: user?.email,
+      password: user?.password, 
+    };
+    dispatch(userLogout(userData)).then(() => navigate("/login"));
   };
 
   return (

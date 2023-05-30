@@ -11,24 +11,32 @@ export const userRegister = createAsyncThunk("USER_REGISTER", (data) => {
   return axios.post(`${apiUrl}/admin`, data).then((user) => user.data);
 });
 
-export const userLogin = createAsyncThunk("USER_LOGGED", (data) => {
-  return axios.post(`${apiUrl}/auth/login`, data).then((user) => {
-    localStorage.setItem("user", JSON.stringify(user.data.email));
-    return user.data;
-  }
-  )
-});
-
-// export const userLogout = createAsyncThunk("USER_LOGOUT", () => {
-//   return axios.post(`${apiUrl}/auth/logout`).then(() => {
-//     localStorage.removeItem("user");
-//   });
+// export const userLogin = createAsyncThunk("USER_LOGGED", (data) => {
+//   return axios.post(`${apiUrl}/auth/login`, data).then((user) => {
+//     localStorage.setItem("user", JSON.stringify(user.data.email));
+//     return user.data;
+//   }
+//   )
 // });
 
-export const userLogout = createAsyncThunk("USER_LOGOUT", () => {
-  localStorage.removeItem("user");
-  return Promise.resolve();
+export const userLogin = createAsyncThunk("USER_LOGGED", (data) => {
+  return axios.post(`${apiUrl}/auth/login`, data).then((user) => {
+    const { password } = data; // Obtén el correo electrónico y la contraseña del objeto data
+    const userData = {
+      email: user.data.email,
+      password: password, // Agrega la contraseña al objeto userData
+    };
+    localStorage.setItem("user", JSON.stringify(userData));
+    return userData; // Devuelve el objeto userData
+  });
 });
+
+export const userLogout = createAsyncThunk("USER_LOGOUT", (data) => {
+  return axios.post(`${apiUrl}/auth/logout`, data).then(() => {
+    localStorage.removeItem("user");
+  });
+});
+
 
 export const userUpdate = createAsyncThunk("USER_UPDATE", (data) => {
   const userId = JSON.parse(localStorage.getItem("user")).id;
