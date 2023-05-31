@@ -48,13 +48,36 @@ export class NewsService {
     newId: string,
     updateNewDto: UpdateNewDto,
   ): Promise<UpdateNewDto> {
+    const trimmedTitle = updateNewDto.newsTitle.trim();
+    const normalizedTitle = trimmedTitle
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '');
+    const modifiedTitle = normalizedTitle.replace(/\s+/g, '-');
+    const modifiedDto = {
+      ...updateNewDto,
+      newsTitle: modifiedTitle,
+    };
+
     const updatedNew = await this.newModel.findByIdAndUpdate(
       newId,
-      updateNewDto,
+      modifiedDto,
       { new: true },
     );
+
     return updatedNew;
   }
+
+  // async updateNew(
+  //   newId: string,
+  //   updateNewDto: UpdateNewDto,
+  // ): Promise<UpdateNewDto> {
+  //   const updatedNew = await this.newModel.findByIdAndUpdate(
+  //     newId,
+  //     updateNewDto,
+  //     { new: true },
+  //   );
+  //   return updatedNew;
+  // }
 
   async deleteNew(newId: string): Promise<CreateNewDto> {
     const deleteNew = await this.newModel.findByIdAndDelete(newId);

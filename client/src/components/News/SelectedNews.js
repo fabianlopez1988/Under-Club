@@ -1,53 +1,50 @@
 import React, { useEffect, useState } from "react";
-import "react-quill/dist/quill.snow.css";
-import axios from "axios";
-// import { Helmet } from "react-helmet";
+import "react-quill/dist/quill.snow.css";;
 import "./SelectedNews.css";
 import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { getNewsByTitle } from "../../store/news";
 
 const SelectedNews = () => {
   const { id } = useParams();
   const [selectedNews, setSelectedNews] = useState({});
-
-  const pathEdited = id.replaceAll("-", " ");
+  const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    axios.get(`/api/news/title/${pathEdited}`).then((response) => {
-      setSelectedNews(response.data);
+   dispatch(getNewsByTitle(id)).then((response) => {
+      setSelectedNews(response.payload);
+      setLoading(false);
     });
-  }, [pathEdited]);
+  }, [id]);
+
+  const pathEdited = id?.replaceAll("-", " ");
+
+  if(loading === true){
+    return null;
+  }
 
   return (
     <div className="selectedNews-container">
-      {/* <Helmet>
-        <title>{selectedNews.newsTitle}</title>
-        <meta name="description" content={selectedNews.newsDescription} />
-        <meta property="og:title" content={selectedNews.newsTitle} />
-        <meta
-          property="og:description"
-          content={selectedNews.newsDescription}
-        />
-        <meta property="og:image" content={selectedNews.photo} />
-      </Helmet> */}
-      <h1 className="selectedNews-title">{selectedNews.newsTitle}</h1>
+      <h1 className="selectedNews-title">{pathEdited}</h1>
       <div>
         <img
-          src={selectedNews.photo}
+          src={selectedNews?.photo}
           alt="photoNew"
           className="selectedNews-photo"
         />
       </div>
       <h3 className="selectedNews-date">
-        {!selectedNews.date
+        {!selectedNews?.date
           ? null
-          : selectedNews.date?.slice(0, 10).split("-").reverse().join("-")}
+          : selectedNews?.date?.slice(0, 10).split("-").reverse().join("-")}
       </h3>
       <h3 className="selectedNews-description">
-        {selectedNews.newsDescription}
+        {selectedNews?.newsDescription}
       </h3>
       <div
         className="selectedNews-body"
-        dangerouslySetInnerHTML={{ __html: selectedNews.newsBody }}
+        dangerouslySetInnerHTML={{ __html: selectedNews?.newsBody }}
       />
     </div>
   );

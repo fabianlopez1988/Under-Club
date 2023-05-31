@@ -50,13 +50,11 @@ const EditViewNews = () => {
   const handleClick = (baseImage) => {
     const newsData = {
       newsTitle: newsTitle.value.length === 0 ? newsRedux.newsTitle : newsTitle.value,
-      // photo: baseImage === "" ? newsRedux.photo : baseImage,
-      // date: date.value === "" ? newsRedux.date : date.value,
-      // newsDescription: newsDescription.value.length === 0 ? newsRedux.newsDescription : newsDescription.value,
-      // newsBody: newsBody === "" ? newsRedux.newsBody : newsBody,
+      photo: baseImage === "" ? newsRedux.photo : baseImage,
+      date: date.value === "" ? newsRedux.date : date.value,
+      newsDescription: newsDescription.value.length === 0 ? newsRedux.newsDescription : newsDescription.value,
+      newsBody: newsBody === "" ? newsRedux.newsBody : newsBody,
     };
-  
-    console.log('News data:', newsData);
   
     dispatch(updateNews(newsData))
       .then(() =>

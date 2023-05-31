@@ -23,9 +23,15 @@ export const getNews = createAsyncThunk("GET_NEW", (id) => {
   return axios.get(`${apiUrl}/news/${id}`).then((newData) => newData.data);
 });
 
+export const getNewsByTitle = createAsyncThunk("GET_NEW", (id) => {
+  return axios.get(`${apiUrl}/news/title/${id}`).then((newData) => newData.data);
+});
+
+
 const newReducer = createReducer(null, {
   [getAllNews.fulfilled]: (state, action) => action.payload,
   [getNews.fulfilled]: (state, action) => action.payload,
+  [getNewsByTitle.fulfilled]: (state, action) => action.payload,
 });
 
 export default newReducer;
