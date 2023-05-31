@@ -33,7 +33,7 @@ const DeleteUserCard = ( { userAdmin } ) => {
   return (
     <div className="card-container-user">
     <h1>{userAdmin.email}</h1>
-    <button onClick={() => handleDelete(userAdmin.id)}>Borrar</button>
+    <button onClick={() => handleDelete(userAdmin._id)}>Borrar</button>
   </div>
   )
 }

@@ -93,7 +93,7 @@ const EditViewEpisode = () => {
             <img
               height={"200px"}
               src={episodeRedux?.flyer}
-              alt={episodeRedux?.id}
+              alt={episodeRedux?._id}
             />
           ) : null}
           <img height={"200px"} src={baseImage} alt="" />

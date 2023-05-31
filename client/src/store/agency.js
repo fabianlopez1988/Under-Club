@@ -11,7 +11,7 @@ export const updateInternationalResidents = createAsyncThunk("UPDATE_INTERNATION
   (data, thunkAPI) => {
     const { agency } = thunkAPI.getState();
     return axios
-      .put(`${apiUrl}/agency/${agency.id}`, data)
+      .put(`${apiUrl}/agency/${agency._id}`, data)
       .then((update) => update.data);
   }
 );

@@ -27,9 +27,9 @@ function UpdateResidents() {
     <h1>Editar Residentes</h1>
     <div className="grid">
     {residents?.data?.map((resident) => (
-        <div key={resident.id}>
-          <Link to={`/admin/ourclub/residents/updateresidents/${resident.id}`}>
-            {/* <img src={resident.photo} alt={resident.id} id={resident.id}/> */}
+        <div key={resident._id}>
+          <Link to={`/admin/ourclub/residents/updateresidents/${resident._id}`}>
+            {/* <img src={resident.photo} alt={resident.id} id={resident._id}/> */}
             <h3>{resident.name}</h3>
 
           </Link>

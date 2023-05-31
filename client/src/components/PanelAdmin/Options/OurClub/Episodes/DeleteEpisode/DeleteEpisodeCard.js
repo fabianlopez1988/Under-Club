@@ -31,8 +31,8 @@ const DeleteEpisodeCard = ({ episode }) => {
 
   return (
     <div className="card-container-episode">
-      <img src={episode.flyer} alt={episode.id} />
-      <button onClick={() => handleDelete(episode.id)}>Borrar</button>
+      <img src={episode.flyer} alt={episode._id} />
+      <button onClick={() => handleDelete(episode._id)}>Borrar</button>
     </div>
   );
 };

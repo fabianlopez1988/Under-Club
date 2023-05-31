@@ -28,7 +28,7 @@ const DeletePodcast = () => {
       <h1>Borrar Podcast</h1>
       <div className="grid">
         {podcasts?.data.map((podcast) => (
-          <DeletePodcastCard key={podcast.id} podcast={podcast} />
+          <DeletePodcastCard key={podcast._id} podcast={podcast} />
         ))}
       </div>
     </div>

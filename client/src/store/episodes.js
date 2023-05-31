@@ -7,9 +7,8 @@ export const addEpisode = createAsyncThunk("ADD_EPISODE", (data) => {
 });
 
 export const updateEpisode = createAsyncThunk("UPDATE_EPISODE", (data, thunkAPI) => {
-  console.log(data , "soy data")
   const {episode} = thunkAPI.getState();
-  return axios.put(`${apiUrl}/episode/${episode.id}`, data).then((update) => update.data);
+  return axios.put(`${apiUrl}/episode/${episode._id}`, data).then((update) => update.data);
 });
 
 export const deleteEpisode = createAsyncThunk("DELETE_EPISODE", (id) => {

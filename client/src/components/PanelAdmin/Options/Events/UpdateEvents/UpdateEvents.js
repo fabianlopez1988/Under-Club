@@ -27,10 +27,10 @@ const UpdateEvents = () => {
     <div className="update-event-container">
       <h1>Editar Evento</h1>
       <div className="grid">
-        {events?.data?.map((event) => (
-              <div>
-                <Link to={`/admin/events/updateevents/${event.id}`}>
-                  <img src={event.flyerGrid} alt={event.id} /> 
+        {events?.data?.map((event, i) => (
+              <div key={i}>
+                <Link to={`/admin/events/updateevents/${event._id}`}>
+                  <img src={event.flyerGrid} alt={event._id} /> 
                 </Link>
                 <div className="date">{event.date.split("T")[0]}</div>
               </div>

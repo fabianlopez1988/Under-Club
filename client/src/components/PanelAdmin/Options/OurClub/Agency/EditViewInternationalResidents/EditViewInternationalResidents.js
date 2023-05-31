@@ -16,7 +16,7 @@ function EditViewInternationalResidents() {
     const biography = useInput()
     const soundcloud = useInput()
     const instagram = useInput()
-    const residentAdvisor = useInput()
+    const nationality = useInput()
     const pressKit = useInput()
 
     const [baseImage, setBaseImage] = useState("")
@@ -51,7 +51,7 @@ function EditViewInternationalResidents() {
                 biography: biography.value.length === 0 ? agencyRedux.biography : biography.value,
                 soundcloud: soundcloud.value.length === 0 ? agencyRedux.soundcloud : soundcloud.value,
                 instagram: instagram.value.length === 0 ? agencyRedux.instagram : instagram.value,
-                residentAdvisor : residentAdvisor.value.length === 0 ? agencyRedux.residentAdvisor : residentAdvisor.value,
+                nationality : nationality.value.length === 0 ? agencyRedux.nationality : nationality.value,
                 pressKit: pressKit.value.length === 0 ? agencyRedux.pressKit : pressKit.value
             })
         )
@@ -94,7 +94,7 @@ function EditViewInternationalResidents() {
             <img
               height={"200px"}
               src={agencyRedux?.photo}
-              alt={agencyRedux?.id}
+              alt={agencyRedux?._id}
             />
           ) : null}
           <img height={"200px"} src={baseImage} alt="" />
@@ -121,7 +121,7 @@ function EditViewInternationalResidents() {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Origen</Form.Label>
           <br></br>
-          <input placeholder={agencyRedux?.residentAdvisor} {...residentAdvisor} />
+          <input placeholder={agencyRedux?.nationality} {...nationality} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">

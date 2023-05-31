@@ -27,9 +27,9 @@ function UpdateInternationalResidents() {
     <h1>Editar Residente Internacional</h1>
     <div className="grid">
     {agencyRedux?.data?.map((resident) => (
-        <div key={resident.id}>
-          <Link to={`/admin/ourclub/agency/updateagency/${resident.id}`}>
-            <img src={resident.photo} alt={resident.id} id={resident.id}/>
+        <div key={resident._id}>
+          <Link to={`/admin/ourclub/agency/updateagency/${resident._id}`}>
+            <img src={resident.photo} alt={resident.id} id={resident._id}/>
           </Link>
         </div>
       ))

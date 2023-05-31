@@ -38,6 +38,17 @@ export class UsersController {
     return createdUser;
   }
 
+  @ApiOperation({ summary: 'Devolver todos los users' })
+  @ApiResponse({
+    status: 200,
+    description: 'Lista de todos los users.',
+  })
+  @Get()
+  async getAllUsers() {
+    const allUsers = await this.usersService.getAllUsers();
+    return allUsers;
+  }
+
   @ApiOperation({ summary: 'Devolver un user por ID' })
   @ApiResponse({
     status: 200,

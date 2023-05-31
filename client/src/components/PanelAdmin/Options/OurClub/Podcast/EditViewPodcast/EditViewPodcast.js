@@ -85,7 +85,7 @@ const EditViewPodcast = () => {
             <img
               height={"200px"}
               src={podcastRedux?.flyer}
-              alt={podcastRedux?.id}
+              alt={podcastRedux?._id}
             />
           ) : null}
           <img height={"200px"} src={baseImage} alt="" />
