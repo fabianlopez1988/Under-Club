@@ -10,6 +10,7 @@ import { EventsModule } from './events/events.module';
 import { EpisodesModule } from './episodes/episodes.module';
 import { PodcastsModule } from './podcast/podcast.module';
 import { NewsModule } from './news/news.module';
+import { MailModule } from './mail/mail.module';
 import { json } from 'express';
 
 @Module({
@@ -25,6 +26,7 @@ import { json } from 'express';
     EventsModule,
     EpisodesModule,
     NewsModule,
+    MailModule,
   ],
   controllers: [AppController],
   providers: [AppService],

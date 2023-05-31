@@ -56,7 +56,7 @@ export const getUsersAll = createAsyncThunk("GET_ALL_USER", () => {
 });
 
 export const sendMailToUnder = createAsyncThunk("SEND_MAIL_TO_UNDER", (mailData) => {
-  return axios.post(`${apiUrl}/admin/sendMail`, mailData)
+  return axios.post(`${apiUrl}/mail/sendMail`, mailData)
 })
 
 const userReducer = createReducer(null, {

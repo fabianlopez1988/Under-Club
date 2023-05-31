@@ -32,9 +32,9 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const mail = {
-      mailPerson: name.value,
-      mailFrom: email.value,
-      mailBody: comment.value,
+      person: name.value,
+      from: email.value,
+      body: comment.value,
     };
     if (name.value.length && email.value.length && comment.value.length) {
       dispatch(sendMailToUnder(mail))
