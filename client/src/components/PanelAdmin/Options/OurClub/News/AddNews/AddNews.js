@@ -51,10 +51,7 @@ function AddNews() {
           newsTitle:
             newsTitle.value.length === 0
               ? errorAlert()
-              : newsTitle.value
-                  .trim()
-                  .normalize("NFD")
-                  .replace(/[\u0300-\u036f]/g, ""),
+              : newsTitle.value,
           photo: baseImage || errorAlert(),
           date: date.value.length === 0 ? errorAlert() : date.value,
           newsDescription:

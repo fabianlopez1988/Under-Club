@@ -66,6 +66,15 @@ export class NewsController {
     return newid;
   }
 
+  @ApiNotFoundResponse({ description: 'El new no existe.' })
+  @ApiParam({ name: 'title', description: 'title del new' })
+  @Get('title/:newsTitle')
+  async getNewsByTitle(@Param('newsTitle') title) {
+    const newsTitle = await this.newsService.getNewsByTitle(title);
+    if (!newsTitle) throw new NotFoundException('New does not exists');
+    return newsTitle;
+  }
+
   @ApiOperation({ summary: 'Actualizar un new' })
   @ApiResponse({
     status: 200,

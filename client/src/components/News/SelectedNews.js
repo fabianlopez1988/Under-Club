@@ -4,7 +4,6 @@ import axios from "axios";
 // import { Helmet } from "react-helmet";
 import "./SelectedNews.css";
 import { useParams } from "react-router-dom";
-import { apiUrl } from "../../utils/apiUrl"
 
 const SelectedNews = () => {
   const { id } = useParams();
@@ -13,7 +12,7 @@ const SelectedNews = () => {
   const pathEdited = id.replaceAll("-", " ");
 
   useEffect(() => {
-    axios.get(`${apiUrl}/news/title/${pathEdited}`).then((response) => {
+    axios.get(`/api/news/title/${pathEdited}`).then((response) => {
       setSelectedNews(response.data);
     });
   }, [pathEdited]);

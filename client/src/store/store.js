@@ -20,7 +20,7 @@ const store = configureStore({
     podcast: podcastReducer,
     episode: episodeReducer,
     agency: agencyReducer,
-    new: newReducer,
+    news: newReducer,
   },
 });
 

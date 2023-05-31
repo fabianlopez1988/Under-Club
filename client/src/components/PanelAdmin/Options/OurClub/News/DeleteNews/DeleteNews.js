@@ -21,14 +21,14 @@ const DeleteNews = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const newsRedux = useSelector((state) => state.new);
+  const newsRedux = useSelector((state) => state.news);
 
   return (
     <div className="delete-container-news">
       <h1>Borrar Noticia</h1>
       <div className="grid">
         {newsRedux?.map((news) => (
-          <DeleteNewsCard key={news.id} news={news} />
+          <DeleteNewsCard key={news._id} news={news} />
         ))}
       </div>
     </div>

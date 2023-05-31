@@ -31,8 +31,8 @@ const DeleteNewsCard = ({ news }) => {
 
   return (
     <div className="card-container-news">
-      <img src={news.photo} alt={news.id} />
-      <button onClick={() => handleDelete(news.id)}>Borrar</button>
+      <img src={news.photo} alt={news._id} />
+      <button onClick={() => handleDelete(news._id)}>Borrar</button>
     </div>
   );
 };

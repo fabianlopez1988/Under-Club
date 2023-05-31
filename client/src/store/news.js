@@ -6,9 +6,9 @@ export const addNews = createAsyncThunk("ADD_NEW", (data) => {
   return axios.post(`${apiUrl}/news`, data).then((newData) => newData.data);
 });
 
-export const updateNews = createAsyncThunk("UPDATE_NEW", (data) => {
-  const id = data.id;
-  return axios.put(`${apiUrl}/news/${id}`, data).then((update) => update.data);
+export const updateNews = createAsyncThunk("UPDATE_NEW", (data, thunkAPI) => {
+  const {news} = thunkAPI.getState();
+  return axios.put(`${apiUrl}/news/${news._id}`, data).then((update) => update.data);
 });
 
 export const deleteNews = createAsyncThunk("DELETE_NEW", (id) => {

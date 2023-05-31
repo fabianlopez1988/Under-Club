@@ -7,7 +7,6 @@ import Form from "react-bootstrap/Form";
 import useInput from "../../../../../../utils/useInput";
 import Swal from "sweetalert2";
 import ReactQuill from "react-quill";
-import slugify from "slugify";
 
 const EditViewNews = () => {
   const { id } = useParams();
@@ -20,8 +19,6 @@ const EditViewNews = () => {
   const newsDescription = useInput();
   const date = useInput();
 
-  const [slug, setSlug] = useState("");
-
   const user = JSON.parse(localStorage.getItem("user"));
 
   useEffect(() => {
@@ -30,19 +27,16 @@ const EditViewNews = () => {
   }, []);
 
   useEffect(() => {
-    dispatch(getNews(id)).then(() => {
-      const generatedSlug = slugify(newsTitle.value, { lower: true });
-      setSlug(generatedSlug);
-    });
+    dispatch(getNews(id));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const newsRedux = useSelector((state) => state.new);
+  const newsRedux = useSelector((state) => state.news);
   const initialStateNewsBody = newsRedux?.newsBody;
   const [newsBody, setNewsBody] = useState("");
 
   const initialStateDescription = newsRedux?.newsDescription;
-  const initialStateTitle = newsRedux?.newsTitle;
+  const initialStateTitle = newsRedux?.newsTitle?.replaceAll("-", " ");
 
   const uploadImage = (e) => {
     const blob = e.target.files[0];
@@ -54,33 +48,17 @@ const EditViewNews = () => {
   };
 
   const handleClick = (baseImage) => {
-    let updatedSlug = slug;
-
-    if (newsTitle.value !== newsRedux.newsTitle) {
-      const generatedSlug = slugify(newsTitle.value, { lower: true });
-      updatedSlug = generatedSlug;
-    }
-
-    dispatch(
-      updateNews({
-        newsTitle:
-          newsTitle.value.length === 0
-            ? newsRedux.newsTitle
-            : newsTitle.value
-                .trim()
-                .normalize("NFD")
-                .replace(/[\u0300-\u036f]/g, ""),
-        photo: baseImage === "" ? newsRedux.photo : baseImage,
-        date: date.value === "" ? newsRedux.date : date.value,
-        newsDescription:
-          newsDescription.value.length === 0
-            ? newsRedux.newsDescription
-            : newsDescription.value,
-        newsBody: newsBody === "" ? newsRedux.newsBody : newsBody,
-        slug: updatedSlug,
-        id: id,
-      })
-    )
+    const newsData = {
+      newsTitle: newsTitle.value.length === 0 ? newsRedux.newsTitle : newsTitle.value,
+      // photo: baseImage === "" ? newsRedux.photo : baseImage,
+      // date: date.value === "" ? newsRedux.date : date.value,
+      // newsDescription: newsDescription.value.length === 0 ? newsRedux.newsDescription : newsDescription.value,
+      // newsBody: newsBody === "" ? newsRedux.newsBody : newsBody,
+    };
+  
+    console.log('News data:', newsData);
+  
+    dispatch(updateNews(newsData))
       .then(() =>
         Swal.fire({
           icon: "success",
@@ -92,7 +70,6 @@ const EditViewNews = () => {
       .then(() => dispatch(getAllNews()))
       .then(() => navigate("/admin/ourclub/news"));
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -111,7 +88,7 @@ const EditViewNews = () => {
             }}
           ></input>
           {!baseImage ? (
-            <img height={"200px"} src={newsRedux?.photo} alt={newsRedux?.id} />
+            <img height={"200px"} src={newsRedux?.photo} alt={newsRedux?._id} />
           ) : null}
           <img height={"200px"} src={baseImage} alt="" />
         </Form.Group>

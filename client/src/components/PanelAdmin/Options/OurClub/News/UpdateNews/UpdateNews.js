@@ -20,7 +20,7 @@ const UpdateNews = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const newsRedux = useSelector((state) => state.new);
+  const newsRedux = useSelector((state) => state.news);
 
   return (
     <div className="update-news-container">
@@ -29,9 +29,9 @@ const UpdateNews = () => {
         {Array.isArray(newsRedux) &&
           newsRedux.length > 0 &&
           newsRedux.map((news) => (
-            <div key={news.id}>
-              <Link to={`/admin/ourclub/news/updatenews/${news.id}`}>
-                <img src={news.photo} alt={news.id} />
+            <div key={news._id}>
+              <Link to={`/admin/ourclub/news/updatenews/${news._id}`}>
+                <img src={news.photo} alt={news._id} />
               </Link>
             </div>
           ))}
