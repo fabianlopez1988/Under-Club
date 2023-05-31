@@ -28,8 +28,8 @@ const UpdatePodcast = () => {
       <div className="grid">
         {podcasts?.data?.map((podcast) => (
           <div>
-            <Link to={`/admin/ourclub/podcast/updatepodcast/${podcast.id}`}>
-              <img src={podcast.flyer} alt={podcast.id} />
+            <Link to={`/admin/ourclub/podcast/updatepodcast/${podcast._id}`}>
+              <img src={podcast.flyer} alt={podcast._id} />
             </Link>
           </div>
           

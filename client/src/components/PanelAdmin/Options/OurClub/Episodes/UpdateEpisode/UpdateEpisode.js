@@ -28,8 +28,8 @@ const UpdateEpisode = () => {
       <div className="grid">
         {episodes?.data?.map((episode) => (
           <div>
-            <Link to={`/admin/ourclub/episode/updateepisode/${episode.id}`}>
-              <img src={episode.flyer} alt={episode.id} />
+            <Link to={`/admin/ourclub/episode/updateepisode/${episode._id}`}>
+              <img src={episode.flyer} alt={episode._id} />
             </Link>
           </div>
           

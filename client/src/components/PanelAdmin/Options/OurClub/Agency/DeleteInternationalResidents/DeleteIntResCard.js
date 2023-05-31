@@ -31,8 +31,8 @@ function DeleteIntResCard({ resident }) {
 
   return (
     <div className="agency-card-container">
-      <img src={resident.photo} alt={resident.id} />
-      <button onClick={() => handleDelete(resident.id)}>Borrar</button>
+      <img src={resident.photo} alt={resident._id} />
+      <button onClick={() => handleDelete(resident._id)}>Borrar</button>
     </div>
   )
 }

@@ -33,7 +33,7 @@ function DeleteCard({ resident }) {
     <div className="card-container">
       {/* <img src={resident.photo} alt={resident.id} /> */}
       <h3>{resident.name}</h3>
-      <button onClick={() => handleDelete(resident.id)}>Borrar</button>
+      <button onClick={() => handleDelete(resident._id)}>Borrar</button>
     </div>
   )
 }

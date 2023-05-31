@@ -33,6 +33,11 @@ export class UsersService {
     return createdUser.save();
   }
 
+  async getAllUsers(): Promise<CreateUserDto[]> {
+    const allUsers = await this.userModel.find();
+    return allUsers;
+  }
+
   async getUser(query: object): Promise<CreateUserDto> {
     return this.userModel.findOne(query);
   }

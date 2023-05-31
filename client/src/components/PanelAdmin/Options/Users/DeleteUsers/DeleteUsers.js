@@ -28,7 +28,7 @@ const DeleteUsers = () => {
     <h1>Borrar Usuario</h1>
     <div className="grid-container-user">
       {users?.data.map((userAdmin) => (
-        <DeleteUserCard key={userAdmin.id} userAdmin={userAdmin} />
+        <DeleteUserCard key={userAdmin._id} userAdmin={userAdmin} />
       ))}
     </div>
   </div>

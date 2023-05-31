@@ -28,7 +28,7 @@ function DeleteInternationalResidents() {
       <h1>Borrar Residente Internacional</h1>
       <div className="grid">
         {agencyRedux?.data.map((resident) => (
-              <DeleteIntResCard key={resident.id} resident={resident} />
+              <DeleteIntResCard key={resident._id} resident={resident} />
             ))
         }
       </div>

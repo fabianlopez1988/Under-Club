@@ -12,7 +12,7 @@ export const updateResidents = createAsyncThunk("UPDATE_RESIDENTS",
   (data, thunkAPI) => {
     const { resident } = thunkAPI.getState();
     return axios
-      .put(`${apiUrl}/residents/${resident.id}`, data)
+      .put(`${apiUrl}/residents/${resident._id}`, data)
       .then((update) => update.data);
   }
 );

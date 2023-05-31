@@ -28,7 +28,7 @@ function DeleteResidents() {
       <h1>Borrar Residente</h1>
       <div className="grid">
         {residentRedux?.data.map((resident) => (
-              <DeleteCard key={resident.id} resident={resident} />
+              <DeleteCard key={resident._id} resident={resident} />
             ))
         }
       </div>

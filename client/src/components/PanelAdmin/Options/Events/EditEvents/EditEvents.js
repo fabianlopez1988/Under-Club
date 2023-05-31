@@ -103,7 +103,7 @@ const EditEvents = () => {
             <img
               height={"200px"}
               src={eventsRedux?.flyerLarge}
-              alt={eventsRedux?.id}
+              alt={eventsRedux?._id}
             />
           ) : null}
 

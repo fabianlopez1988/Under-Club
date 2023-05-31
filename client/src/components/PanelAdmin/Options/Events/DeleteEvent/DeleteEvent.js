@@ -28,7 +28,7 @@ const DeleteEvent = () => {
       <h1>Borrar Evento</h1>
       <div className="grid">
         {events?.data.map((event) => (
-          <DeleteEventCard key={event.id} event={event} />
+          <DeleteEventCard key={event._id} event={event} />
         ))}
       </div>
     </div>

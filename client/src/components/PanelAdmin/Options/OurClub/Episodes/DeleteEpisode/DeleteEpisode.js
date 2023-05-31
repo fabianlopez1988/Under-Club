@@ -28,7 +28,7 @@ const DeleteEpisode = () => {
       <h1>Borrar Episodio</h1>
       <div className="grid">
         {episodes?.data.map((episode) => (
-          <DeleteEpisodeCard key={episode.id} episode={episode} />
+          <DeleteEpisodeCard key={episode._id} episode={episode} />
         ))}
       </div>
     </div>
