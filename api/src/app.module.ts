@@ -12,12 +12,15 @@ import { PodcastsModule } from './podcast/podcast.module';
 import { NewsModule } from './news/news.module';
 import { MailModule } from './mail/mail.module';
 import { json } from 'express';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(
-      'mongodb+srv://underclubdb:YeP5ohRSZuIBQRff@ucweb.mj8mbcr.mongodb.net/?retryWrites=true&w=majority',
-    ),
+    ConfigModule.forRoot({
+      envFilePath: '.env',
+      isGlobal: true,
+    }),
+    MongooseModule.forRoot(process.env.DB_URI),
     UserModule,
     AuthModule,
     AgencyModule,
