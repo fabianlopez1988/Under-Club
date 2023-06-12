@@ -12,14 +12,12 @@ import { PodcastsModule } from './podcast/podcast.module';
 import { NewsModule } from './news/news.module';
 import { MailModule } from './mail/mail.module';
 import { json } from 'express';
-import { ConfigModule } from '@nestjs/config';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 @Module({
   imports: [
-    ConfigModule.forRoot({
-      envFilePath: '.env',
-      isGlobal: true,
-    }),
     MongooseModule.forRoot(process.env.DB_URI),
     UserModule,
     AuthModule,

@@ -7,9 +7,11 @@ services:
       context: ./api
       dockerfile: Dockerfile
     ports:
-      - 6000:6000
+      - 5000:5000
     volumes:
       - ./api/:/api
+    env_file:
+      - ./api/src/.env 
     networks:
       - mynetwork
 

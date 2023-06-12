@@ -33,11 +33,11 @@
     "sweetalert2": "^11.4.34",
     "web-vitals": "^2.1.4"
   },
+  "proxy": "http://18.221.225.71:5000",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build"
   },
-  "proxy": "http://api:6000",
   "eslintConfig": {
     "extends": [
       "react-app",
