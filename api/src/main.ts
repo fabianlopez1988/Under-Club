@@ -4,9 +4,20 @@ import { ValidationPipe } from '@nestjs/common';
 import * as bodyParser from 'body-parser';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import 'dotenv/config';
+import * as fs from 'fs';
+import * as path from 'path';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, {
+    httpsOptions: {
+      key: fs.readFileSync(
+        path.resolve(__dirname, '../impactfulsites.com.ar.key'),
+      ),
+      cert: fs.readFileSync(
+        path.resolve(__dirname, '../impactfulsites.com.ar.crt'),
+      ),
+    },
+  });
   app.use(bodyParser.json({ limit: '50mb' }));
   app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
   app.enableCors();
