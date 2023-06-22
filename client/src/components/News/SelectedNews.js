@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import "react-quill/dist/quill.snow.css";;
-import "./SelectedNews.css";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import "react-quill/dist/quill.snow.css";
+import "./SelectedNews.css";
 import { getNewsByTitle } from "../../store/news";
+
 
 const SelectedNews = () => {
   const { id } = useParams();
