@@ -11,10 +11,10 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     httpsOptions: {
       key: fs.readFileSync(
-        path.resolve(__dirname, '../impactfulsites.com.ar.key'),
+        path.resolve(__dirname, '../underclub.com.ar.key'),
       ),
       cert: fs.readFileSync(
-        path.resolve(__dirname, '../impactfulsites.com.ar.crt'),
+        path.resolve(__dirname, '../underclub.com.ar.crt'),
       ),
     },
   });
@@ -42,15 +42,6 @@ async function bootstrap() {
     .addTag('podcast')
     .addTag('mail')
     .build();
-
-  const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document, {
-    explorer: true,
-    swaggerOptions: {
-      filter: true,
-      showRequestDuration: true,
-    },
-  });
 
   await app.listen(5000);
 }
