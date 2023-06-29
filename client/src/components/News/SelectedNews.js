@@ -4,8 +4,7 @@ import { useDispatch } from "react-redux";
 import "react-quill/dist/quill.snow.css";
 import "./SelectedNews.css";
 import { getNewsByTitle } from "../../store/news";
-import { Helmet } from "react-helmet";
-
+import { Helmet } from "react-helmet-async";
 
 const SelectedNews = () => {
   const { id } = useParams();
@@ -21,7 +20,7 @@ const SelectedNews = () => {
   }, [id]);
 
   const pathEdited = id?.replaceAll("-", " ");
-  const ogUrl = `https://underclub.com.ar/${id}`;
+  const ogUrl = `https://underclub.com.ar/news/${id}`;
 
   if(loading === true){
     return null;
@@ -29,7 +28,7 @@ const SelectedNews = () => {
 
   return (
     <>
-          <Helmet>
+        <Helmet>
         {/* Primary Meta Tags */}
         <title>{selectedNews?.title}</title>
         <meta name="title" content={selectedNews?.title} />
