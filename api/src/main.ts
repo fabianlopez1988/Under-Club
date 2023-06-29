@@ -39,15 +39,6 @@ async function bootstrap() {
     .addTag('mail')
     .build();
 
-  const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document, {
-    explorer: true,
-    swaggerOptions: {
-      filter: true,
-      showRequestDuration: true,
-    },
-  });
-
   await app.listen(5000);
 }
 bootstrap();
