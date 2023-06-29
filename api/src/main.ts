@@ -10,12 +10,8 @@ import * as path from 'path';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     httpsOptions: {
-      key: fs.readFileSync(
-        path.resolve(__dirname, '../impactfulsites.com.ar.key'),
-      ),
-      cert: fs.readFileSync(
-        path.resolve(__dirname, '../impactfulsites.com.ar.crt'),
-      ),
+      key: fs.readFileSync(path.resolve(__dirname, '../underclub.com.ar.key')),
+      cert: fs.readFileSync(path.resolve(__dirname, '../underclub.com.ar.crt')),
     },
   });
   app.use(bodyParser.json({ limit: '50mb' }));
