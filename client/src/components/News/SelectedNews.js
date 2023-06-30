@@ -42,7 +42,7 @@ const SelectedNews = () => {
         <meta property="og:url" content={ogUrl} />
         <meta property="og:title" content={titleMetaTag} />
         <meta property="og:description" content={descriptionMetaTag} />
-        <meta property="og:image" content={photoMetaTag} />
+        {/* <meta property="og:image" content={photoMetaTag} /> */}
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -52,7 +52,7 @@ const SelectedNews = () => {
           property="twitter:description"
           content={descriptionMetaTag}
         />
-        <meta property="twitter:image" content={photoMetaTag} />
+        {/* <meta property="twitter:image" content={photoMetaTag} /> */}
       </Helmet>
       <div className="selectedNews-container">
       <h1 className="selectedNews-title">{pathEdited}</h1>
