@@ -20,7 +20,9 @@ const SelectedNews = () => {
   }, [id]);
 
   const pathEdited = id?.replaceAll("-", " ");
-  const ogUrl = `https://underclub.com.ar/news/${id}`;
+  let ogUrl = `https://underclub.com.ar/news/${id}`;
+  let titleMetaTag = selectedNews?.title
+  let descriptionMetaTag = selectedNews?.description
 
   if(loading === true){
     return null;
@@ -30,24 +32,24 @@ const SelectedNews = () => {
     <>
         <Helmet>
         {/* Primary Meta Tags */}
-        <title>{selectedNews?.title}</title>
-        <meta name="title" content={selectedNews?.title} />
-        <meta name="description" content={selectedNews?.description} />
+        <title>{titleMetaTag}</title>
+        <meta name="title" content={titleMetaTag} />
+        <meta name="description" content={descriptionMetaTag} />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={ogUrl} />
-        <meta property="og:title" content={selectedNews?.title} />
-        <meta property="og:description" content={selectedNews?.description} />
+        <meta property="og:title" content={titleMetaTag} />
+        <meta property="og:description" content={descriptionMetaTag} />
         <meta property="og:image" content={selectedNews?.photo} />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={ogUrl} />
-        <meta property="twitter:title" content={selectedNews?.title} />
+        <meta property="twitter:title" content={titleMetaTag} />
         <meta
           property="twitter:description"
-          content={selectedNews?.description}
+          content={descriptionMetaTag}
         />
         <meta property="twitter:image" content={selectedNews?.photo} />
       </Helmet>
