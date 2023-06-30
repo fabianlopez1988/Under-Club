@@ -21,9 +21,10 @@ const SelectedNews = () => {
 
   const pathEdited = id?.replaceAll("-", " ");
   let ogUrl = `https://underclub.com.ar/news/${id}`;
-  let titleMetaTag = selectedNews?.title
-  let descriptionMetaTag = selectedNews?.description
-
+  let titleMetaTag = selectedNews?.newsTitle
+  let descriptionMetaTag = selectedNews?.newsDescription
+  let photoMetaTag = selectedNews?.photo
+  
   if(loading === true){
     return null;
   }
@@ -41,7 +42,7 @@ const SelectedNews = () => {
         <meta property="og:url" content={ogUrl} />
         <meta property="og:title" content={titleMetaTag} />
         <meta property="og:description" content={descriptionMetaTag} />
-        <meta property="og:image" content={selectedNews?.photo} />
+        <meta property="og:image" content={photoMetaTag} />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -51,13 +52,13 @@ const SelectedNews = () => {
           property="twitter:description"
           content={descriptionMetaTag}
         />
-        <meta property="twitter:image" content={selectedNews?.photo} />
+        <meta property="twitter:image" content={photoMetaTag} />
       </Helmet>
       <div className="selectedNews-container">
       <h1 className="selectedNews-title">{pathEdited}</h1>
       <div>
         <img
-          src={selectedNews?.photo}
+          src={photoMetaTag}
           alt="photoNew"
           className="selectedNews-photo"
         />
