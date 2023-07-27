@@ -38,7 +38,7 @@ const Agency = () => {
         <motion.div className="progress-bar-agency" style={{ scaleX: scrollYProgress }} />
         <section className="agency-section">
           <h1 className="agency-section-title">
-            AGENCIAa<br></br>
+            AGENCIA<br></br>
           </h1>
           {!sortedResidents
             ? null
