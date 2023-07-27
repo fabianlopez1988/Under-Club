@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { AgencyDocument } from '../entities/agency.entity';
 import { CreateAgencyDto, UpdateAgencyDto } from '../dtos/agency.dto';
+import { AgencyDocument } from '../entities/agency.entity';
 
 @Injectable()
 export class AgencyService {
@@ -28,7 +28,7 @@ export class AgencyService {
   }
 
   async getAllInternationalResidents(): Promise<CreateAgencyDto[]> {
-    const allAgency = await this.agencyModel.find();
+    const allAgency = await this.agencyModel.find().sort({ name: 1 });
     return allAgency;
   }
 
