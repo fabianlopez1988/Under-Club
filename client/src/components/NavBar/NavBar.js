@@ -60,13 +60,13 @@ const NavBar = () => {
                     </a>
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/artists">
                     <a onClick={handleClick} href="/">
                       Residentes
                     </a>
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </li>
 
@@ -92,13 +92,13 @@ const NavBar = () => {
               </Link> */}
             </li>
 
-            <li>
+            {/* <li>
               <Link to="/agency" target="_blank">
                 <a onClick={handleClick} className="navbar-agency-button">
                   Agencia
                 </a>
               </Link>
-            </li>
+            </li> */}
 
             <li>
               <Link to="/contact">
