@@ -77,13 +77,13 @@ function App() {
           //  location={location} key={location.pathname}
            >
             <Route path="/" element={<Home />} />
-            <Route path="/artists" element={<Artists />} />
+            {/* <Route path="/artists" element={<Artists />} /> */}
             <Route path="/history" element={<History />} />
             <Route path="/culture" element={<Culture />} />
             <Route path="/events" element={<Events />} />
             <Route path="/milestones" element={<Milestone />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/agency" element={<Agency />} />
+            {/* <Route path="/agency" element={<Agency />} /> */}
             <Route path="/news" element={<News />} />
             <Route path="/news/:id" element={<SelectedNews />} />
 
